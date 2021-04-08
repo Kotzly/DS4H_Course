@@ -23,11 +23,46 @@ Impacto da pandemia da COVID-19 nos indicadores da saúde materna e perinatal na
 
 
 # Bases de Dados
-[Sistema de Informação de Nascidos Vivo](https://datasus.saude.gov.br/transferencia-de-arquivos/) (SINASC/DATASUS), website do ministério da saúde
-[Banco de Dados de Síndrome Respiratória Aguda Grave](https://opendatasus.saude.gov.br/dataset/bd-srag-2021) - incluindo dados da COVID-19
+
+ - [Sistema de Informação de Nascidos Vivo](https://datasus.saude.gov.br/transferencia-de-arquivos/) (SINASC/DATASUS), website do ministério da saúde
+
+ - [Banco de Dados de Síndrome Respiratória Aguda Grave](https://opendatasus.saude.gov.br/dataset/bd-srag-2021) - incluindo dados da COVID-19
 
 # Metodologia
-> Proposta de metodologia incluindo especificação de quais técnicas pretende-se explorar, tais como: aprendizagem de máquina, análise de redes, análise estatística, ou integração de uma ou mais técnicas. Para a primeira entrega, descreva de maneira mais genérica que tipo de abordagem seu grupo pretende realizar.
+
+Utilização de análise estatística para verificação da primeira pergunta de pesquisa.
+
+Utilização de Aprendizado de Máquina e modelos estatísticos para predição de eventos futuros utilizando os dados à disposição.
+
+## Variáveis de interesse
+
+ - Tamanho da população do estado de São Paulo e dos municípios;
+ - Tamanho da população do estado dos municípios de São Paulo;
+ - Número de casos de COVID-19 no estado e por município de São Paulo;
+ - Número de Óbitos no estado e por Município.
+ - Dados da mãe:
+ - Idade da mãe;
+ - Escolaridade;
+ - Status marital;
+ - Cor de pele/raça.
+
+## Tarefas previstas
+ - Calcularemos a incidência da COVID-19 no estado e por Município;
+ - Estimaremos a taxa de mortalidade e letalidade da COVID-19 no estado e no Município.
+
+Tendo os dados:
+ - Com o auxílio a linguagem Python podemos estabelecer um ranking dos municípios com base nos seguintes indicadores (incidência, taxa de mortalidade e letalidade da COVID-19)
+ - Checar quais os municípios com piores indicadores.
+
+Tendo o ranking dos municípios:
+ - Podemos escolher os municípios com pior classificação (exemplo, 5 municípios e o município de são Paulo se este não fizer parte do Top 5).
+ - Podemos checar dados de todos os municípios, mas tendo especial atenção para os 6 com piores indicadores.
+
+Em seguida extrairemos dados de número de nascidos vivos (mês/mês) no geral (para os 6 municípios) e em função de:
+ - Idade da mãe;
+ - Escolaridade;
+ - Status marital;
+ - Cor de pele/raça.
 
 # Ferramentas
 
