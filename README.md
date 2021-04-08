@@ -18,7 +18,9 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 Impacto da pandemia da COVID-19 nos indicadores da saúde materna e perinatal nas mulheres em idade fértil do Estado de São Paulo.
 
 # Perguntas de Pesquisa
-> Perguntas de pesquisa que o projeto pretende responder ou hipóteses a serem avaliadas, enunciadas de maneira objetiva e verificável.
+ - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
+ - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
+
 
 # Bases de Dados
 [Sistema de Informação de Nascidos Vivo](https://datasus.saude.gov.br/transferencia-de-arquivos/) (SINASC/DATASUS), website do ministério da saúde
