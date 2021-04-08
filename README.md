@@ -1,5 +1,6 @@
-# Projeto `<Título em Português>`
-# Project `<Title in English>`
+# Projeto `Impacto da pandemia da COVID-19 nos indicadores da saúde materna e perinatal nas mulheres em idade fértil do Estado de São Paulo.`
+
+# Project `Impact of the COVID-19 pandemic on maternal and perinatal health indicators in women of childbearing potential in the state of São Paulo.`
 
 # Apresentação
 
@@ -20,7 +21,6 @@ Impacto da pandemia da COVID-19 nos indicadores da saúde materna e perinatal na
 # Perguntas de Pesquisa
  - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
  - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
-
 
 # Bases de Dados
 
