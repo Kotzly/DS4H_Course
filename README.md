@@ -10,7 +10,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 |--|--|--|
 | Nome1  | 123456  | Saúde|
 | Nome2  | 123456  | Computação|
-| Débora  | 123456  | XXX|
+| Débora Rocha Helfstein  | 234934  | Farmacêutica|
 | Paulo Augusto | 263889 | Elétrica |
 
 
