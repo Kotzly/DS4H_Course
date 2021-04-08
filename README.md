@@ -8,8 +8,8 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 
 |Nome  | RA | Especialização|
 |--|--|--|
-| Nome1  | 123456  | Saúde|
-| Nome2  | 123456  | Computação|
+|Charles M'poca Charles | 163383 | Saúde|
+| Nome | 123456  | Computação|
 | Débora Rocha Helfstein  | 234934  | Farmacêutica|
 | Paulo Augusto | 263889 | Elétrica |
 
