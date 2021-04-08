@@ -12,7 +12,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 |Charles M'poca Charles | 163383 | Saúde|
 | Silvia Arantes Pereira Olivio | 224932  | Computação|
 | Débora Rocha Helfstein  | 234934  | Farmacêutica|
-| Paulo Augusto | 263889 | Elétrica |
+| Paulo Augusto Alves Luz Viana | 263889 | Elétrica |
 
 
 # Descrição Resumida do Projeto
