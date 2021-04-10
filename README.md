@@ -37,7 +37,6 @@ Utilização de Aprendizado de Máquina e modelos estatísticos para predição 
 ## Variáveis de interesse
 
  - Tamanho da população do estado de São Paulo e dos municípios;
- - Tamanho da população do estado dos municípios de São Paulo;
  - Número de casos de COVID-19 no estado e por município de São Paulo;
  - Número de Óbitos no estado e por Município.
  - Dados da mãe:
