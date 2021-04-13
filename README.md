@@ -56,14 +56,14 @@ Tendo os dados:
  - Checar quais os municípios com piores indicadores.
 
 Tendo o ranking dos municípios:
- - Podemos escolher os municípios com pior classificação (exemplo, 5 municípios e o município de são Paulo se este não fizer parte do Top 5).
- - Podemos checar dados de todos os municípios, mas tendo especial atenção para os 6 com piores indicadores.
+Podemos escolher os municípios com pior classificação (top 10); 
+Em seguida iremos extrair dados de número de nascidos vivos (mês/mês) no geral (para os 10 municípios) e em função de:
+- Idade da mãe;
+- Escolaridade;
+- Status marital;
+- Cor de pele/raça.
+Correlacionar a previsão de de nascidos vivos para 2020 (dados os anos anteriores) com o real número
 
-Em seguida extrairemos dados de número de nascidos vivos (mês/mês) no geral (para os 6 municípios) e em função de:
- - Idade da mãe;
- - Escolaridade;
- - Status marital;
- - Cor de pele/raça.
 
 # Ferramentas
 
