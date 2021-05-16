@@ -3,7 +3,7 @@ import urllib.request as request
 from contextlib import closing
 from pathlib import Path
 import zipfile38 as zipfile
-from download_utils import download_from_url, get_sinasc_url, get_sim_url, get_srag_url
+from ds4h.data.download_utils import download_from_url, get_sinasc_url, get_sim_url, get_srag_url
 
 DEPTH = "../.."
 
