@@ -11,6 +11,11 @@ FILEPATH = "ftp://ftp.datasus.gov.br/tabwin/tabwin/TAB415.zip"
 THIRD_PARTY_FOLDER = Path(__file__).absolute().parent / DEPTH / "third_party"
 OUTPUT_FILEPATH =  THIRD_PARTY_FOLDER / "TAB415.zip"
 
+def download_ftp(url, savepath):
+    with closing(request.urlopen(url)) as r:
+        with open(savepath, 'wb') as f:
+            shutil.copyfileobj(r, f)
+
 if __name__ == "__main__":
     
     if not OUTPUT_FILEPATH.exists():
