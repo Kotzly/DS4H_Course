@@ -33,6 +33,7 @@ def get_ranking_dataframe(min_population=30000):
         return dc1
 
     full_df = get_cities_dataframe()
+    df = full_df.copy()
 
     results = {}
     summed = None
@@ -52,3 +53,7 @@ def get_ranking_dataframe(min_population=30000):
         df = pd.concat([df, sp_df], axis=0)
     
     return df
+
+def get_top_cities_from_df(df, code_col="Cod_IBGE", city_col="municipio"):
+    city_dict = {(code // 10): name for _, (code, name) in df[[code_col, city_col]].iterrows()}
+    return city_dict
