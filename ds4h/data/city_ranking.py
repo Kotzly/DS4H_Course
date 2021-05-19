@@ -1,6 +1,21 @@
 import pandas as pd
 from pathlib import Path
 
+_C = {
+  3502101: 'Andradina',
+  3502804: 'Araçatuba',
+  3505708: 'Barueri',
+  3514403: 'Dracena',
+  3517406: 'Guaira',
+  3524808: 'Jales',
+  3546801: 'Santa Isabel',
+  3548500: 'Santos',
+  3548807: 'São Caetano do Sul',
+  3549805: 'São José do Rio Preto',
+  3550308: 'São Paulo'
+}
+CITY_CODE_DICT = {(cod // 10): name for cod, name in _C.items()}
+
 def get_cities_dataframe():
     filepath = Path("../data/processed/indexes/municipios.csv")
     df = pd.read_csv(filepath, sep=";")
