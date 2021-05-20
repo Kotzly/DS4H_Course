@@ -1,6 +1,21 @@
 import pandas as pd
 from pathlib import Path
 
+_C = {
+  3502101: 'Andradina',
+  3502804: 'Araçatuba',
+  3505708: 'Barueri',
+  3514403: 'Dracena',
+  3517406: 'Guaira',
+  3524808: 'Jales',
+  3546801: 'Santa Isabel',
+  3548500: 'Santos',
+  3548807: 'São Caetano do Sul',
+  3549805: 'São José do Rio Preto',
+  3550308: 'São Paulo'
+}
+CITY_CODE_DICT = {(cod // 10): name for cod, name in _C.items()}
+
 def get_cities_dataframe():
     filepath = Path("../data/processed/indexes/municipios.csv")
     df = pd.read_csv(filepath, sep=";")
@@ -33,6 +48,7 @@ def get_ranking_dataframe(min_population=30000):
         return dc1
 
     full_df = get_cities_dataframe()
+    df = full_df.copy()
 
     results = {}
     summed = None
@@ -52,3 +68,7 @@ def get_ranking_dataframe(min_population=30000):
         df = pd.concat([df, sp_df], axis=0)
     
     return df
+
+def get_top_cities_from_df(df, code_col="Cod_IBGE", city_col="municipio"):
+    city_dict = {(code // 10): name for _, (code, name) in df[[code_col, city_col]].iterrows()}
+    return city_dict
