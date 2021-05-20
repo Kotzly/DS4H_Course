@@ -1,8 +1,8 @@
+local_lib_path = "./.Rlocal"
 
-dir.create("./.Rlocal")
-install.packages('read.dbc', lib="./.Rlocal")
-.libPaths( c( .libPaths(), "./.Rlocal") )
-# install.packages('read.dbc')
+dir.create(local_lib_path)
+install.packages('read.dbc', lib=local_lib_path)
+.libPaths(c( .libPaths(), local_lib_path))
 library('read.dbc')
 
 args = commandArgs(trailingOnly=TRUE)
@@ -26,4 +26,4 @@ for (file in files){
     write.csv(df, csv_filepath)
 }
 
-# unlink("./.Rlocal", recursive=TRUE)
+unlink(local_lib_path, recursive=TRUE)
