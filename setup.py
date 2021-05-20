@@ -21,5 +21,7 @@ setuptools.setup(
          "Operating System :: OS Independent",
      ],
      python_requires='>=3.6',
-     install_requires=required,
+     install_requires=required,,
+    include_package_data=True,
+    package_data={"": ["*.r", "*.R"]},
  )
