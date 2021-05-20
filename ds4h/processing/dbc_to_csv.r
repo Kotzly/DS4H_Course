@@ -1,6 +1,7 @@
 
 dir.create("./.Rlocal")
 install.packages('read.dbc', lib="./.Rlocal")
+libPaths( c( .libPaths(), "./Rlocal") )
 # install.packages('read.dbc')
 library('read.dbc')
 
