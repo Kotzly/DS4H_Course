@@ -12,7 +12,7 @@ SINASC_2020_URL = "http://svs.aids.gov.br/dantps/centrais-de-conteudos/dados-abe
 
 N_JOBS = 4
 
-def download_dbc(save_path, years=DEFAULT_YEARS):
+def download_dbc(save_path, years=DEFAULT_YEARS, n_jobs=N_JOBS):
     save_path = Path(save_path)
 
     save_path.mkdir(exist_ok=True)
@@ -29,7 +29,7 @@ def download_dbc(save_path, years=DEFAULT_YEARS):
 
     print("Downloading data from {} years using {} threads".format(len(SINASC_URLS), N_JOBS), end="")
     start = time()
-    with mp.Pool(4) as pool:
+    with mp.Pool(n_jobs) as pool:
         pool.starmap(download_ftp, args)
     print(
         "Download completed in {:.1f}s".format(time() - start)

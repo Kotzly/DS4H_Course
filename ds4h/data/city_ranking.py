@@ -1,5 +1,7 @@
 import pandas as pd
 from pathlib import Path
+import os
+from ds4h.data.download import download_ftp
 
 _C = {
   3502101: 'Andradina',
@@ -17,8 +19,8 @@ _C = {
 CITY_CODE_DICT = {(cod // 10): name for cod, name in _C.items()}
 
 def get_cities_dataframe():
-    filepath = Path("../data/processed/indexes/municipios.csv")
-    df = pd.read_csv(filepath, sep=";")
+    municipios_csv_url = "https://raw.githubusercontent.com/Kotzly/DS4H_Course/main/data/processed/indexes/municipios.csv"
+    df = pd.read_csv(municipios_csv_url, sep=";")
     df["taxa_de_incidencia"] = df["total_casos"] / df["populacao"]
     return df
 
