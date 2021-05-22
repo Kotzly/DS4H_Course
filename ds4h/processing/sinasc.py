@@ -15,19 +15,24 @@ def parse_year(d):
     year += 2000
   return year
 
+def str_to_datetime(date):
+  string = str(date)
+  # 3022017 gives error (it reads the day as 30, but the month 22 does not exist), so we add a 0 to the start of the string
+  if (string[0] != "0") and len(string) < 8:
+    string = "0" + string
+  return dt.strptime(string, "%d%m%Y")s
+
 def process_sinasc(df, city_code_dict=None):
     if city_code_dict is None:
         city_code_dict = CITY_CODE_DICT
-    
 
     df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
-    df["MUNNAME"] = df.CODMUNNASC.apply(lambda x: city_code_dict[x])
+    df.loc[:, "MUNNAME"] = df.CODMUNNASC.apply(lambda x: city_code_dict[x])
 
+    # Filtering for the rows that are from the selected cities
     df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
-    df["YEAR"], df["MONTH"], df["DAY"] = 0, 0, 0
-    df["DAY"] = df.DTNASC.apply(parse_day)
-    df["MONTH"] = df.DTNASC.apply(parse_month)
-    df["YEAR"] = df.DTNASC.apply(parse_year)
-    df["CITYNAME"] = df.CODMUNNASC.apply(lambda x: city_code_dict[x])
+
+    # Parsing date column
+    df.loc[:, "DTNASC"] = df["DTNASC"].apply(str_to_datetime).astype("datetime64")
 
     return df
