@@ -32,6 +32,9 @@ def process_sinasc(df, city_code_dict=None):
 
     # Filtering for the rows that are from the selected cities
     df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
+    
+    #remove missing data
+    union_df = union_df.dropna()
 
     # Parsing date column
     df.loc[:, "DTNASC"] = df["DTNASC"].apply(str_to_datetime).astype("datetime64")
