@@ -1,4 +1,5 @@
 from ds4h.data.city_ranking import CITY_CODE_DICT
+from datetime import datetime as dt
 
 def parse_day(d):
   d = str(d)
