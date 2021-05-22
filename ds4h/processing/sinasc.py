@@ -20,7 +20,7 @@ def str_to_datetime(date):
   # 3022017 gives error (it reads the day as 30, but the month 22 does not exist), so we add a 0 to the start of the string
   if (string[0] != "0") and len(string) < 8:
     string = "0" + string
-  return dt.strptime(string, "%d%m%Y")s
+  return dt.strptime(string, "%d%m%Y")
 
 def process_sinasc(df, city_code_dict=None):
     if city_code_dict is None:
