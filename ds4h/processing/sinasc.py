@@ -35,5 +35,15 @@ def process_sinasc(df, city_code_dict=None):
 
     # Parsing date column
     df.loc[:, "DTNASC"] = df["DTNASC"].apply(str_to_datetime).astype("datetime64")
+    
+    #Filtering inconsistent data
+    union_df = union_df[union_df['QTDFILVIVO']<=30]
+    union_df = union_df[union_df['QTDFILMORT']<=30]
+    union_df = union_df[union_df['QTDFILMORT']<=65]
+    union_df = union_df[union_df['ESTCIVMAE']<=5]
+    union_df = union_df[union_df['PARTO'] <= 2.0]
+    union_df = union_df[union_df['IDANOMAL'] <= 2.0]
+    union_df = union_df[union_df['GESTACAO'] <= 6.0]
+    union_df = union_df[union_df['ESCMAE2010'] <= 5.0]
 
     return df
