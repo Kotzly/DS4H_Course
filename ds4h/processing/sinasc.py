@@ -48,7 +48,7 @@ def process_sinasc(df, city_code_dict=None):
       else:
         return "A3"
         
-    df.loc["AGEGROUP"] = df["IDADEMAE"].apply(age_to_group)
+    # df.loc["AGEGROUP"] = df["IDADEMAE"].apply(age_to_group)
 
     #Filtering inconsistent data
     df = df[df['QTDFILVIVO']<=30]
