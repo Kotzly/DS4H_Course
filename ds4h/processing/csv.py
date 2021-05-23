@@ -2,7 +2,8 @@ import pandas as pd
 from pathlib import Path
 import numpy as np
 
-SINASC_COLS = ["DTNASC", "QTDFILVIVO", "QTDFILMORT", "IDADEMAE", "RACACOR", "RACACORMAE", "CODMUNNASC", "ESTCIVMAE", "ESCMAE", "PARTO", "IDANOMAL", "GESTACAO", "ESCMAE2010"]
+# SINASC_COLS = ["DTNASC", "QTDFILVIVO", "QTDFILMORT", "IDADEMAE", "RACACOR", "RACACORMAE", "CODMUNNASC", "ESTCIVMAE", "ESCMAE", "PARTO", "IDANOMAL", "GESTACAO", "ESCMAE2010"]
+SINASC_COLS = ["DTNASC", "QTDFILVIVO", "QTDFILMORT", "IDADEMAE", "RACACOR", "RACACORMAE", "CODMUNNASC", "ESTCIVMAE", "ESCMAE", "PARTO", "IDANOMAL", "GESTACAO"]
 
 def join_sinasc_files(csv_folder, save_path=None, cols=None):
     csv_folder = Path(csv_folder)
@@ -12,12 +13,12 @@ def join_sinasc_files(csv_folder, save_path=None, cols=None):
     for csv_filepath in csv_folder.glob("*.csv"):
 
         print("Loading", csv_filepath.name)
-        #df = pd.read_csv(csv_filepath, usecols=cols)[cols]
+        df = pd.read_csv(csv_filepath, usecols=cols)[cols]
         
-        df = pd.read_csv(csv_filepath)
-        for col in SINASC_COLS:
-            if not col in df.columns:
-                df[col] = np.nan
+        # df = pd.read_csv(csv_filepath)
+        # for col in SINASC_COLS:
+        #     if not col in df.columns:
+        #         df[col] = np.nan
 
         df = df[cols]
 

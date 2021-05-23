@@ -38,7 +38,18 @@ def process_sinasc(df, city_code_dict=None):
 
     # Parsing date column
     df.loc[:, "DTNASC"] = df["DTNASC"].apply(str_to_datetime).astype("datetime64")
-    
+
+    # Parsing date column
+    def age_to_group(x):
+      if x < 20:
+        return "A1"
+      elif x < 35:
+        return "A2"
+      else:
+        return "A3"
+        
+    df.loc["AGEGROUP"] = df["IDADEMAE"].apply(age_to_group)
+
     #Filtering inconsistent data
     df = df[df['QTDFILVIVO']<=30]
     df = df[df['QTDFILMORT']<=30]
