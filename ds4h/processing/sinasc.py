@@ -25,10 +25,9 @@ def str_to_datetime(date):
   return dt.strptime(string, "%d%m%Y")
 
 def to_null(df, conditions):
-  all_cond = conditions[0].values
-  for cond in conditions[1:]:
-    all_cond = np.bitwise_and(all_cond, cond)
-  return df[all_cond]
+  for col, condition in conditions:
+    df.loc[condition, col] = np.nan
+  return df
 
 def age_to_group(x):
   if x < 20:
@@ -59,15 +58,15 @@ def process_sinasc(df, city_code_dict=None, nullify=True):
       df = to_null(
         df,
         conditions = [
-          df['QTDFILVIVO'] <= 30,
-          df['QTDFILMORT'] <= 30,
-          df['QTDFILMORT'] <= 65,
-          df['ESTCIVMAE'] <= 5,
-          df['PARTO'] <= 2.0,
-          df['IDANOMAL'] <= 2.0,
-          df['GESTACAO'] <= 6.0,
-          df['RACACOR'] <= 5.0,
-          df['RACACORMAE'] <= 5.0
+          ("QTDFILVIVO", df['QTDFILVIVO'] <= 30),
+          ("QTDFILMORT", df['QTDFILMORT'] <= 30),
+          ("QTDFILMORT", df['QTDFILMORT'] <= 65),
+          ("ESTCIVMAE", df['ESTCIVMAE'] <= 5),
+          ("PARTO", df['PARTO'] <= 2.0),
+          ("IDANOMAL", df['IDANOMAL'] <= 2.0),
+          ("GESTACAO", df['GESTACAO'] <= 6.0),
+          ("RACACOR", df['RACACOR'] <= 5.0),
+          ("RACACORMAE", df['RACACORMAE'] <= 5.0)
         ]
       )
 
