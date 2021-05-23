@@ -90,54 +90,54 @@ def age_to_group(x):
     return "A3"
 
 def process_sinasc(df, city_code_dict=None, nullify=True):
-    if city_code_dict is None:
-        city_code_dict = CITY_CODE_DICT
+  if city_code_dict is None:
+      city_code_dict = CITY_CODE_DICT
 
-    df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
-    df.loc[:, "MUNNAME"] = df.CODMUNNASC.apply(city_code_dict.get)
+  df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
+  df.loc[:, "MUNNAME"] = df.CODMUNNASC.apply(city_code_dict.get)
 
-    # Filtering for the rows that are from the selected cities
-    df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
+  # Filtering for the rows that are from the selected cities
+  df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
 
-    # Parsing date column
-    df.loc[:, "DTNASC"] = df["DTNASC"].apply(str_to_datetime).astype("datetime64")
+  # Parsing date column
+  df.loc[:, "DTNASC"] = df["DTNASC"].apply(str_to_datetime).astype("datetime64")
 
-    # Categorization of age
-    df["AGEGROUP"] = df["IDADEMAE"].apply(age_to_group)
+  # Categorization of age
+  df["AGEGROUP"] = df["IDADEMAE"].apply(age_to_group)
 
-    df["YEAR"] = df.DTNASC.dt.year
-    df["MONTH"] = df.DTNASC.dt.month
-    df["DAY"] = df.DTNASC.dt.day
+  df["YEAR"] = df.DTNASC.dt.year
+  df["MONTH"] = df.DTNASC.dt.month
+  df["DAY"] = df.DTNASC.dt.day
 
-    #Filtering inconsistent data
-    if nullify:
-      df = to_null(
-        df,
-        conditions = [
-          ("QTDFILVIVO", df['QTDFILVIVO'] > 30.),
-          ("QTDFILMORT", df['QTDFILMORT'] > 30.),
-          ("IDADEMAE", df['IDADEMAE'] > 65),
-          ("ESTCIVMAE", df['ESTCIVMAE'] > 5.),
-          ("PARTO", df['PARTO'] > 2.),
-          ("IDANOMAL", df['IDANOMAL'] > 2.),
-          ("GESTACAO", df['GESTACAO'] > 6.),
-          ("RACACOR", df['RACACOR'] > 5.),
-          ("RACACORMAE", df['RACACORMAE'] > 5.),
-          ("ESCMAE", df['ESCMAE'] > 5.)
-        ]
-      )
+  #Filtering inconsistent data
+  if nullify:
+    df = to_null(
+      df,
+      conditions = [
+        ("QTDFILVIVO", df['QTDFILVIVO'] > 30.),
+        ("QTDFILMORT", df['QTDFILMORT'] > 30.),
+        ("IDADEMAE", df['IDADEMAE'] > 65),
+        ("ESTCIVMAE", df['ESTCIVMAE'] > 5.),
+        ("PARTO", df['PARTO'] > 2.),
+        ("IDANOMAL", df['IDANOMAL'] > 2.),
+        ("GESTACAO", df['GESTACAO'] > 6.),
+        ("RACACOR", df['RACACOR'] > 5.),
+        ("RACACORMAE", df['RACACORMAE'] > 5.),
+        ("ESCMAE", df['ESCMAE'] > 5.)
+      ]
+    )
 
-    return df
+  return df
 
 def code_to_str(df):
-    dict_cols = SINASC_TRANSLATE_DICT.keys()
-    df_cols = df.columns
-    common_columns = set(dict_cols).intersection(df_cols)
-    for col in common_columns:
-        df.loc[:, col] = df[col].apply(
-            partial(
-                SINASC_TRANSLATE_DICT[col].get,
-                np.nan
-            )
-        ) 
-    return df
+
+  dict_cols = SINASC_TRANSLATE_DICT.keys()
+  df_cols = df.columns
+  common_columns = set(dict_cols).intersection(df_cols)
+
+  sub_fn = lambda key: SINASC_TRANSLATE_DICT[col].get(key, np.nan)
+
+  for col in common_columns:
+    df.loc[:, col] = df[col].apply(sub_fn)
+
+  return df
