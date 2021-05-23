@@ -19,6 +19,8 @@ def join_sinasc_files(csv_folder, save_path=None, cols=None):
             if not col in df.columns:
                 df[col] = np.nan
 
+        df = df[cols]
+
         if union_df is None:
             union_df = df
         else:
