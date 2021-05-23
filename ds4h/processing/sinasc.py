@@ -137,6 +137,6 @@ def code_to_str(df):
         df.loc[:, col] = df[col].apply(
             partial(
                 SINASC_TRANSLATE_DICT[col].get,
-                default=np.nan
+                np.nan
             )
         ) 
