@@ -58,7 +58,7 @@ def process_sinasc(df, city_code_dict=None):
     df = df[df['PARTO'] <= 2.0]
     df = df[df['IDANOMAL'] <= 2.0]
     df = df[df['GESTACAO'] <= 6.0]
-    df = df[df['ESCMAE2010'] <= 5.0]
+    # df = df[df['ESCMAE2010'] <= 5.0]
 
     df = df[df['RACACOR'] <= 5.0]
     df = df[df['RACACORMAE'] <= 5.0]
