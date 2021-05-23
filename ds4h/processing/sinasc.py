@@ -58,15 +58,15 @@ def process_sinasc(df, city_code_dict=None, nullify=True):
       df = to_null(
         df,
         conditions = [
-          ("QTDFILVIVO", df['QTDFILVIVO'] <= 30),
-          ("QTDFILMORT", df['QTDFILMORT'] <= 30),
-          ("QTDFILMORT", df['QTDFILMORT'] <= 65),
-          ("ESTCIVMAE", df['ESTCIVMAE'] <= 5),
-          ("PARTO", df['PARTO'] <= 2.0),
-          ("IDANOMAL", df['IDANOMAL'] <= 2.0),
-          ("GESTACAO", df['GESTACAO'] <= 6.0),
-          ("RACACOR", df['RACACOR'] <= 5.0),
-          ("RACACORMAE", df['RACACORMAE'] <= 5.0)
+          ("QTDFILVIVO", df['QTDFILVIVO'] > 30),
+          ("QTDFILMORT", df['QTDFILMORT'] > 30),
+          ("QTDFILMORT", df['QTDFILMORT'] > 65),
+          ("ESTCIVMAE", df['ESTCIVMAE'] > 5),
+          ("PARTO", df['PARTO'] > 2.0),
+          ("IDANOMAL", df['IDANOMAL'] > 2.0),
+          ("GESTACAO", df['GESTACAO'] > 6.0),
+          ("RACACOR", df['RACACOR'] > 5.0),
+          ("RACACORMAE", df['RACACORMAE'] > 5.0)
         ]
       )
 
