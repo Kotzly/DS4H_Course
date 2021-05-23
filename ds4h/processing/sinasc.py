@@ -140,3 +140,4 @@ def code_to_str(df):
                 np.nan
             )
         ) 
+    return df
