@@ -25,8 +25,8 @@ def str_to_datetime(date):
   return dt.strptime(string, "%d%m%Y")
 
 def to_null(df, conditions):
-  all_cond = conds[0].values
-  for cond in conds[1:]:
+  all_cond = conditions[0].values
+  for cond in conditions[1:]:
     all_cond = np.bitwise_and(all_cond, cond)
   return df[all_cond]
 
@@ -43,14 +43,17 @@ def process_sinasc(df, city_code_dict=None, nullify=True):
         city_code_dict = CITY_CODE_DICT
 
     df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
-    df.loc[:, "MUNNAME"] = df.CODMUNNASC.apply(lambda x: city_code_dict[x])
+    df.loc[:, "MUNNAME"] = df.CODMUNNASC.apply(city_code_dict.get)
 
     # Filtering for the rows that are from the selected cities
     df = df[df.CODMUNNASC.apply(lambda x: x in city_code_dict.keys())]
 
     # Parsing date column
     df.loc[:, "DTNASC"] = df["DTNASC"].apply(str_to_datetime).astype("datetime64")
-        
+
+    # Categorization of age
+    df["AGEGROUP"] = df["IDADEMAE"].apply(age_to_group)
+    
     #Filtering inconsistent data
     if nullify:
       df = to_null(
