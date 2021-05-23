@@ -24,8 +24,8 @@ def str_to_datetime(date):
     string = "0" + string
   return dt.strptime(string, "%d%m%Y")
 
-def to_null(df, conds):
-  all_cond = conds[0]
+def to_null(df, conditions):
+  all_cond = conds[0].values
   for cond in conds[1:]:
     all_cond = np.bitwise_and(all_cond, cond)
   return df[all_cond]
@@ -38,7 +38,7 @@ def age_to_group(x):
   else:
     return "A3"
 
-def process_sinasc(df, city_code_dict=None):
+def process_sinasc(df, city_code_dict=None, nullify=True):
     if city_code_dict is None:
         city_code_dict = CITY_CODE_DICT
 
@@ -52,19 +52,20 @@ def process_sinasc(df, city_code_dict=None):
     df.loc[:, "DTNASC"] = df["DTNASC"].apply(str_to_datetime).astype("datetime64")
         
     #Filtering inconsistent data
-    df = to_null(
-      df,
-      [
-        df['QTDFILVIVO'] <= 30,
-        df['QTDFILMORT'] <= 30,
-        df['QTDFILMORT'] <= 65,
-        df['ESTCIVMAE'] <= 5,
-        df['PARTO'] <= 2.0,
-        df['IDANOMAL'] <= 2.0,
-        df['GESTACAO'] <= 6.0,
-        df['RACACOR'] <= 5.0,
-        df['RACACORMAE'] <= 5.0
-      ]
-    )
+    if nullify:
+      df = to_null(
+        df,
+        conditions = [
+          df['QTDFILVIVO'] <= 30,
+          df['QTDFILMORT'] <= 30,
+          df['QTDFILMORT'] <= 65,
+          df['ESTCIVMAE'] <= 5,
+          df['PARTO'] <= 2.0,
+          df['IDANOMAL'] <= 2.0,
+          df['GESTACAO'] <= 6.0,
+          df['RACACOR'] <= 5.0,
+          df['RACACORMAE'] <= 5.0
+        ]
+      )
 
     return df
