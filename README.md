@@ -23,19 +23,23 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 ## Estrutura de arquivos e pastas
 
 ```text
+DS4H_Course
 ├───assets                              <- Arquivos relacionados ao projeto.
 │   └───excel                           <- Arquivos excel gerados durante o desenvolvimento.
 ├───data                                <- Dados utilizados no projeto.
-│   ├───external                        
+│   ├───external
 │   └───processed
 │       └───indexes
-├───documents                           <- Documentos relacionados ao projeto ao aos dados.
-├───ds4h                                <- Todo o código fonte está nesta pasta, em substituição à pasta src
-│   ├───data
-│   ├───processing
-│   ├───visualization
-│   └───orange                          <- Arquivos do Orange criados durante o projeto.
-└───notebooks                           <- Notebooks jupyter utilizados no projeto.
+├───documents                           <- Documentos relacionados ao projeto e aos dados.
+├───notebooks                           <- Notebooks jupyter utilizados no projeto.
+└───src                                 <- Código fonte do projeto.
+    ├───ds4h                            <- Pacote python instalável.
+    │   ├───data
+    │   ├───orange
+    │   ├───processing
+    │   ├───scripts
+    │   └───visualization
+    └───orange                          <- Arquivos do Orange usados para visualização.
 ```
 # Instalação
 
@@ -52,7 +56,7 @@ conda activate ds4h
  - Na pasta raiz do projeto, instale o pacote com:
 
 ```
-pip install .
+pip install ./src
 ```
 
  - Caso você vá rodar o notebook principal do projeto, instale a linguagem R em sua máquina. A maneira mais fácil de fazer isso é instalando o [RStudio](https://www.rstudio.com/products/rstudio/download/#download), mas não problema em instalar apenas o R.
@@ -127,6 +131,12 @@ Com os dados obtidos:
     - [x] Limpeza (remover valores absurdos).
 
 Para a primeira entrega:
+ - [x] Definição das perguntas de pesquisa;
+ - [x] Definição da metodologia;
+ - [x] Criação do repositório no GitHub.
+ - [x] Documentação inicial, cronograma, verificação de banco de dados;
+
+Para a segunda entrega:
  - EDA com:
     - [x] Plots das progressões do número de nascidos vivos durante os anos;
     - [x] Plots com os número de nascidos vivos, estratificados pelas variáveis categóricas do dataset;
