@@ -40,18 +40,18 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 # Instalação
 
 O projeto está sendo desenvolvido majoritariamente em Python 3.6, mas também foram utilizadas outras ferramentas como R, Orange, e Prism. É possível instalar o pacote do projeto (`ds4h`) seguindo os seguintes passos:
-    - Instale o [Anaconda](https://www.anaconda.com/products/individual). Ele será usada para o gerenciamento do ambiente python.
-    - Para rodar os scripts do Orange, instale-o na tela inicial do Anaconda. Para fazer isso, abra o Anaconda Navigator no seu computador, e clique em `install` no ícono do Orange.
-    - Na linha de comando ou no Anaconda shell, crie o ambiente com:
-    ```
-    conda env create -n ds4h python=3.6
-    conda activate ds4h
-    ```
-    - Na pasta raiz do projeto, instale o pacote com:
-    ```
-    pip install .
-    ```
-    - Caso você vá rodar o notebook principal do projeto, instale a linguagem R em sua máquina. A maneira mais fácil de fazer isso é instalando o [RStudio](https://www.rstudio.com/products/rstudio/download/#download), mas não problema em instalar apenas o R.
+ - Instale o [Anaconda](https://www.anaconda.com/products/individual). Ele será usada para o gerenciamento do ambiente python.
+ - Para rodar os scripts do Orange, instale-o na tela inicial do Anaconda. Para fazer isso, abra o Anaconda Navigator no seu computador, e clique em `install` no ícono do Orange.
+ - Na linha de comando ou no Anaconda shell, crie o ambiente com:
+```
+conda env create -n ds4h python=3.6
+conda activate ds4h
+```
+ - Na pasta raiz do projeto, instale o pacote com:
+```
+pip install .
+```
+ - Caso você vá rodar o notebook principal do projeto, instale a linguagem R em sua máquina. A maneira mais fácil de fazer isso é instalando o [RStudio](https://www.rstudio.com/products/rstudio/download/#download), mas não problema em instalar apenas o R.
 
 ## Como usar
 
@@ -99,7 +99,9 @@ Utilização de Aprendizado de Máquina e modelos estatísticos para predição 
  - Número de filhos vivos;
  - Número de filhos mortos.
 
-## Tarefas realizadas
+## Tarefas
+
+### Realizadas
  - [x] Calcularemos a incidência da COVID-19 no estado e por Município;
  - [x] Estimaremos a taxa de mortalidade e letalidade da COVID-19 no estado e no Município.
 
@@ -125,7 +127,7 @@ Para a primeira entrega:
     - [x] Plots com os número de nascidos vivos, estratificados pelas variáveis categóricas do dataset;
     - [x] Correlação entre as variáveis numéricas do dataset.
 
-### Tarefas previstas
+### Previstas
 
  - [ ] Modelagem do número de nascidos vivos, com caráter preditivo.
     - [ ] Análise do impacto das variáveis de entrada na predição do modelo;
@@ -134,15 +136,22 @@ Para a primeira entrega:
  - [ ] Verificação, por cidade, do impacto da pandemia do COVID-19 por cidade avaliada.
 
 
+## Ferramentas
 
 
-# Ferramentas
-
+### Ferramentas de software
 Ferramenta | Endereço na Web | Resumo descritivo e uso
 ----- | ----- | -----
+Python | https://www.python.org/ | Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Utilizaremos extensivamento bibliotecas como [Pandas](https://pandas.pydata.org/), [Numpy](https://numpy.org/), [Matplotlib](https://matplotlib.org/) e [Scikit-learn](https://scikit-learn.org/stable/).
 Jupyter Notebook | https://jupyter.org/ | Documento virtual que permite execução de rotinas usuais de programação e documentação de todo o processo de produção do código. No projeto será utilizado para o código de reestruturação da base de dados e para os modelos.
 Google Colab | https://colab.research.google.com/ | Similar ao jupyter notebook, o Colab é uma lista de células que podem conter textos explicativos ou códigos executáveis e suas respectivas saídas.
 R | https://www.rstudio.com/products/rstudio/download/#download | R é uma linguagem de programação multi-paradigma orientada a objetos, programação funcional, dinâmica, fracamente tipada, voltada à manipulação, análise e visualização de dados. No projeto se utilizou o RStudio como meio de instalação do R.
+
+### Ferramentas estatísticas
+O ferramental estatístico utilizado será o apresentado durante as aulas, mais os que os componentes do grupo tiverem conhecimento e julgarem adequados. Como já foi descrito, iremos utilizar:
+ - Regressão linear (no número de nascidos vivos).
+ - Testes de hipótese (comparação entre os número de nascidos vivos, entre as proporções de nascidos vivos entre subamostras da população, testes de normalidade).
+ - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis e métodos de [XAI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
 
 # Cronograma
 
