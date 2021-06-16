@@ -19,7 +19,7 @@ Você pode rodar o notebook com todas as análises atráves deste [Jupyter noteb
 ## Descrição Resumida do Projeto
 Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial. Atualmente (12/04/2021), ao nível global foram notificados cerca de 136,181,468, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 2,938,804 caso notificados. A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde. De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal que podem influenciar negativamente nos seus indicadores, como é o caso do número de nascidos vivos. Objetivo: o presente estudo tem o objetivo de avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo. Metodologia: será realizado uma análise de serie temporal, baseada em dados Sistema de Informações de Nascidos Vivos (SINASC/DATASUS) e do Banco de Dados de Síndrome Respiratória Aguda Grave (SRAG 2021), com o auxílio de métodos estatísticos  e de ferramentas inteligência artificial (métodos de aprendizado de maquinas) - SPSS Modeler 18.1, Google Colab e  Jupyter Notebook - realizaremos a modelagem, análise da curva de nascimentos vivos nos últimos 10 anos prévios a pandemia e a predição do número de nascidos vivos esperados para o ano 2020.  Resultados esperados: através desta pesquisa esperamos obter os padrões das curvas de nascidos vivos e estabelecer uma correlação entre a pandemia e o indicador de saúde materna e perinatal para os diferentes municípios do estado de São Paulo.
 
-Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
+
 
 ## Abstract
 
@@ -27,8 +27,33 @@ Introduction: The COVID-19 pandemic caused by the SARS_COV_2 virus has taken on 
 
 Please watch the project presentation [video](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing).
 
-## Objetivos do projeto??
-## Motivação??
+## Videos do Projeto
+
+# Vídeo da Proposta
+Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
+
+# Vídeo da Apresentação Final
+????
+
+## Slides do Projeto
+
+# Slides da Proposta
+# Slides da Apresentação Final
+
+# Introdução e Referenciais de Teóricos
+> Contextualização do projeto
+>
+> Caracterização do problema
+>
+> Motivação
+>
+> Relevância
+>
+> Trabalhos relacionados
+>
+> Indicação (bastante resumida) da análise proposta
+>
+> Indicação (bastante resumida) dos resultados alcançados
 
 ## Estrutura de arquivos e pastas
 
@@ -84,7 +109,9 @@ jupyter notebook
 
 Vá até a pasta `notebooks` e abra o notebook **DS4H_full.ipynb**.
 
-
+## Perguntas de Pesquisa
+ - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
+ - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
 
 # Metodologia
 
@@ -92,9 +119,6 @@ Utilização de análise estatística e testes de hipótese para verificação d
 
 Utilização de Aprendizado de Máquina e modelos estatísticos para predição de eventos futuros utilizando os dados à disposição. Análise do impacto das variáveis preditoras do número de nascidos vivos para explicação dos fenômenos encontrados.
 
-## Perguntas de Pesquisa
- - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
- - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
 
 ## Bases de Dados
 
