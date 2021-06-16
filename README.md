@@ -1,60 +1,3 @@
-# Projeto `Impacto da pandemia da COVID-19 nos indicadores da saúde materna e perinatal nas mulheres em idade fértil do Estado de São Paulo.`
-
-## Project `Impact of the COVID-19 pandemic on maternal and perinatal health indicators in women of childbearing age in the state of São Paulo.`
-
-# Apresentação
-
-O presente projeto foi originado no contexto das atividades da disciplina de pós-graduação [*Ciência e Visualização de Dados em Saúde*](https://github.com/datasci4health/home), oferecida no primeiro semestre de 2021, na Unicamp.
-
-
-|Nome  | RA | Especialização|
-|--|--|--|
-|Charles M'poca Charles | 163383 | Saúde|
-| Silvia Arantes Pereira Olivio | 224932  | Computação|
-| Débora Rocha Helfstein  | 234934  | Farmacêutica|
-| Paulo Augusto Alves Luz Viana | 263889 | Elétrica |
-
-Você pode rodar o notebook com todas as análises atráves deste [Jupyter notebook no Google Colab!](https://colab.research.google.com/github/Kotzly/DS4H_Course/blob/v1.0/notebooks/DS4H_full.ipynb).
-
-## Descrição Resumida do Projeto
-Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial. Atualmente (12/04/2021), ao nível global foram notificados cerca de 136,181,468, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 2,938,804 caso notificados. A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde. De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal que podem influenciar negativamente nos seus indicadores, como é o caso do número de nascidos vivos. Objetivo: o presente estudo tem o objetivo de avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo. Metodologia: será realizado uma análise de serie temporal, baseada em dados Sistema de Informações de Nascidos Vivos (SINASC/DATASUS) e do Banco de Dados de Síndrome Respiratória Aguda Grave (SRAG 2021), com o auxílio de métodos estatísticos  e de ferramentas inteligência artificial (métodos de aprendizado de maquinas) - SPSS Modeler 18.1, Google Colab e  Jupyter Notebook - realizaremos a modelagem, análise da curva de nascimentos vivos nos últimos 10 anos prévios a pandemia e a predição do número de nascidos vivos esperados para o ano 2020.  Resultados esperados: através desta pesquisa esperamos obter os padrões das curvas de nascidos vivos e estabelecer uma correlação entre a pandemia e o indicador de saúde materna e perinatal para os diferentes municípios do estado de São Paulo.
-
-
-
-## Abstract
-
-Introduction: The COVID-19 pandemic caused by the SARS_COV_2 virus has taken on alarming proportions worldwide. Currently (12/04/2021), at the global level, about 136,181,468 have been notified, with Brazil being one of the countries most affected by the pandemic, with approximately 2,938,804 reported cases. The pandemic has affected the general population regardless of sex, race, and social strata, with a great impact on the health system. Among the effects of the pandemic on the health system, the interruption or reduction in the provision of maternal and perinatal health services stand out, which can negatively influence its indicators, such as the number of live births. Objective: This study aims to assess the impact of the COVID-19 pandemic on the number of live births in the cities of the state of São Paulo. Methodology: a time series analysis will be carried out, based on data from the Live Birth Information System (SINASC/DATASUS) and the Severe Acute Respiratory Syndrome Database (SRAG 2021), with the aid of statistical methods and artificial intelligence tools (machine learning methods) - SPSS Modeler 18.1, Google Colab and Jupyter Notebook - we will carry out the modeling, analysis of the curve of live births in the last 10 years prior to the pandemic and the prediction of the number of live births expected for the year 2020. Results Expected: through this research we hope to obtain the patterns of the curves of live births and establish a correlation between the pandemic and the maternal and perinatal health indicator for the different cities of the state of São Paulo
-
-Please watch the project presentation [video](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing).
-
-# Videos do Projeto
-
-## Vídeo da Proposta
-Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
-
-## Vídeo da Apresentação Final
-????
-
-# Slides do Projeto
-
-## Slides da Proposta
-## Slides da Apresentação Final
-
-# Introdução e Referenciais de Teóricos
-> Contextualização do projeto
->
-> Caracterização do problema
->
-> Motivação
->
-> Relevância
->
-> Trabalhos relacionados
->
-> Indicação (bastante resumida) da análise proposta
->
-> Indicação (bastante resumida) dos resultados alcançados
-
 ## Estrutura de arquivos e pastas
 
 ```text
@@ -109,16 +52,71 @@ jupyter notebook
 
 Vá até a pasta `notebooks` e abra o notebook **DS4H_full.ipynb**.
 
+
+
+# Projeto `Impacto da pandemia da COVID-19 nos indicadores da saúde materna e perinatal nas mulheres em idade fértil do Estado de São Paulo.`
+
+## Project `Impact of the COVID-19 pandemic on maternal and perinatal health indicators in women of childbearing age in the state of São Paulo.`
+
+# Apresentação
+
+O presente projeto foi originado no contexto das atividades da disciplina de pós-graduação [*Ciência e Visualização de Dados em Saúde*](https://github.com/datasci4health/home), oferecida no primeiro semestre de 2021, na Unicamp.
+
+
+|Nome  | RA | Especialização|
+|--|--|--|
+|Charles M'poca Charles | 163383 | Saúde|
+| Silvia Arantes Pereira Olivio | 224932  | Computação|
+| Débora Rocha Helfstein  | 234934  | Farmacêutica|
+| Paulo Augusto Alves Luz Viana | 263889 | Elétrica |
+
+Você pode rodar o notebook com todas as análises atráves deste [Jupyter notebook no Google Colab!](https://colab.research.google.com/github/Kotzly/DS4H_Course/blob/v1.0/notebooks/DS4H_full.ipynb).
+
+## Descrição Resumida do Projeto
+Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial. Atualmente (12/04/2021), ao nível global foram notificados cerca de 136,181,468, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 2,938,804 caso notificados. A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde. De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal que podem influenciar negativamente nos seus indicadores, como é o caso do número de nascidos vivos. Objetivo: o presente estudo tem o objetivo de avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo. Metodologia: será realizado uma análise de serie temporal, baseada em dados Sistema de Informações de Nascidos Vivos (SINASC/DATASUS) e do Banco de Dados de Síndrome Respiratória Aguda Grave (SRAG 2021), com o auxílio de métodos estatísticos  e de ferramentas inteligência artificial (métodos de aprendizado de maquinas) - SPSS Modeler 18.1, Google Colab e  Jupyter Notebook - realizaremos a modelagem, análise da curva de nascimentos vivos nos últimos 10 anos prévios a pandemia e a predição do número de nascidos vivos esperados para o ano 2020.  Resultados esperados: através desta pesquisa esperamos obter os padrões das curvas de nascidos vivos e estabelecer uma correlação entre a pandemia e o indicador de saúde materna e perinatal para os diferentes municípios do estado de São Paulo.
+
+## Abstract
+
+# Videos do Projeto
+
+## Vídeo da Proposta
+Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
+
+## Vídeo da Apresentação Final
+????
+
+# Slides do Projeto
+
+## Slides da Proposta
+## Slides da Apresentação Final
+
+# Introdução e Referenciais de Teóricos
+> Contextualização do projeto
+>
+> Caracterização do problema
+>
+> Motivação
+>
+> Relevância
+>
+> Trabalhos relacionados
+>
+> Indicação (bastante resumida) da análise proposta
+>
+> Indicação (bastante resumida) dos resultados alcançados
+
 ## Perguntas de Pesquisa
  - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
  - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
+
+# Objetivos do Projeto
+> Como seu projeto propôs abordar o problema apresentado.
 
 # Metodologia
 
 Utilização de análise estatística e testes de hipótese para verificação da primeira pergunta de pesquisa. Criação de modelos estatísticos para avaliação do impacto de diferentes variáveis populacionais no impacto do número de nascidos vivos.
 
 Utilização de Aprendizado de Máquina e modelos estatísticos para predição de eventos futuros utilizando os dados à disposição. Análise do impacto das variáveis preditoras do número de nascidos vivos para explicação dos fenômenos encontrados.
-
 
 ## Bases de Dados
 
@@ -140,6 +138,37 @@ Utilização de Aprendizado de Máquina e modelos estatísticos para predição 
  - Se nasceu com anomalia;
  - Número de filhos vivos;
  - Número de filhos mortos.
+
+### Integração entre Bases e Análise Exploratória ??? Não sei se precisa por ou não, tá no modelo do professor
+
+# Análises Realizadas
+> Descrição detalhada das análises realizadas.
+
+## Ferramentas
+
+### Ferramentas de software
+Ferramenta | Endereço na Web | Resumo descritivo e uso
+----- | ----- | -----
+Python | https://www.python.org/ | Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Utilizaremos extensivamento bibliotecas como [Pandas](https://pandas.pydata.org/), [Numpy](https://numpy.org/), [Matplotlib](https://matplotlib.org/), [SciPy](https://www.scipy.org/) e [Scikit-learn](https://scikit-learn.org/stable/).
+Jupyter Notebook | https://jupyter.org/ | Documento virtual que permite execução de rotinas usuais de programação e documentação de todo o processo de produção do código. No projeto será utilizado para o código de reestruturação da base de dados e para os modelos.
+Google Colab | https://colab.research.google.com/ | Similar ao jupyter notebook, o Colab é uma lista de células que podem conter textos explicativos ou códigos executáveis e suas respectivas saídas.
+R | https://www.rstudio.com/products/rstudio/download/#download | R é uma linguagem de programação multi-paradigma orientada a objetos, programação funcional, dinâmica, fracamente tipada, voltada à manipulação, análise e visualização de dados. No projeto se utilizou o RStudio como meio de instalação do R.
+
+### Ferramentas estatísticas
+O ferramental estatístico utilizado será o apresentado durante as aulas, mais os que os componentes do grupo tiverem conhecimento e julgarem adequados. Como já foi descrito, iremos utilizar:
+ - Regressão linear (no número de nascidos vivos).
+ - Testes de hipótese (comparação entre os número de nascidos vivos, entre as proporções de nascidos vivos entre subamostras da população, testes de normalidade).
+ - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis e métodos de [XAI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
+
+# Resultados
+
+# Discussão
+
+# Conclusão
+
+# Trabalhos Futuros
+
+# Referências Bibliográficas
 
 ## Tarefas
 
@@ -184,23 +213,6 @@ Para a segunda entrega:
  - [ ] Verificação, por cidade, do impacto da pandemia do COVID-19 por cidade avaliada.
 
 
-## Ferramentas
-
-
-### Ferramentas de software
-Ferramenta | Endereço na Web | Resumo descritivo e uso
------ | ----- | -----
-Python | https://www.python.org/ | Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Utilizaremos extensivamento bibliotecas como [Pandas](https://pandas.pydata.org/), [Numpy](https://numpy.org/), [Matplotlib](https://matplotlib.org/), [SciPy](https://www.scipy.org/) e [Scikit-learn](https://scikit-learn.org/stable/).
-Jupyter Notebook | https://jupyter.org/ | Documento virtual que permite execução de rotinas usuais de programação e documentação de todo o processo de produção do código. No projeto será utilizado para o código de reestruturação da base de dados e para os modelos.
-Google Colab | https://colab.research.google.com/ | Similar ao jupyter notebook, o Colab é uma lista de células que podem conter textos explicativos ou códigos executáveis e suas respectivas saídas.
-R | https://www.rstudio.com/products/rstudio/download/#download | R é uma linguagem de programação multi-paradigma orientada a objetos, programação funcional, dinâmica, fracamente tipada, voltada à manipulação, análise e visualização de dados. No projeto se utilizou o RStudio como meio de instalação do R.
-
-### Ferramentas estatísticas
-O ferramental estatístico utilizado será o apresentado durante as aulas, mais os que os componentes do grupo tiverem conhecimento e julgarem adequados. Como já foi descrito, iremos utilizar:
- - Regressão linear (no número de nascidos vivos).
- - Testes de hipótese (comparação entre os número de nascidos vivos, entre as proporções de nascidos vivos entre subamostras da população, testes de normalidade).
- - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis e métodos de [XAI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
-
 # Cronograma
 
 ## Previsto
@@ -233,12 +245,4 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
 | Documentação                            |       |   |   | x | x     | x | x | x | x    | x | x |   |       |   |   |   |       |
 | Apresentação de resultados              |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
 
-## Evolução do Projeto
 
-## Resultados e Discussão
-
-## Conclusões
-
-## Trabalhos Futuros
-
-## Referências
