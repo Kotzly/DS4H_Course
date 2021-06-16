@@ -35,10 +35,10 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 ## Vídeo da Apresentação Final
 ????
 
-## Slides do Projeto
+# Slides do Projeto
 
-# Slides da Proposta
-# Slides da Apresentação Final
+## Slides da Proposta
+## Slides da Apresentação Final
 
 # Introdução e Referenciais de Teóricos
 > Contextualização do projeto
