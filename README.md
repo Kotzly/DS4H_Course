@@ -82,15 +82,15 @@ Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado p
 ## Vídeo da Proposta
 Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
 
-## Vídeo da Apresentação Final
-????
+## Vídeo da Apresentação Final  - Falta
 
-# Slides do Projeto
 
-## Slides da Proposta
-## Slides da Apresentação Final
+# Slides do Projeto - Falta
 
-# Introdução e Referenciais de Teóricos
+## Slides da Proposta - Falta
+## Slides da Apresentação Final - Falta
+
+# Introdução e Referenciais de Teóricos - Falta
 > Contextualização do projeto
 >
 > Caracterização do problema
@@ -109,7 +109,7 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
  - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
  - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
 
-# Objetivos do Projeto
+# Objetivos do Projeto - Falta
 > Como seu projeto propôs abordar o problema apresentado.
 
 # Metodologia
@@ -141,7 +141,7 @@ Utilização de Aprendizado de Máquina e modelos estatísticos para predição 
 
 ### Integração entre Bases e Análise Exploratória ??? Não sei se precisa por ou não, tá no modelo do professor
 
-# Análises Realizadas
+# Análises Realizadas - Falta
 > Descrição detalhada das análises realizadas.
 
 ## Ferramentas
@@ -160,17 +160,17 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
  - Testes de hipótese (comparação entre os número de nascidos vivos, entre as proporções de nascidos vivos entre subamostras da população, testes de normalidade).
  - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis e métodos de [XAI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
 
-# Resultados
+# Resultados - Falta
 
-# Discussão
+# Discussão - Falta
 
-# Conclusão
+# Conclusão - Falta
 
-# Trabalhos Futuros
+# Trabalhos Futuros - Falta
 
-# Referências Bibliográficas
+# Referências Bibliográficas - Falta
 
-## Tarefas
+## Tarefas 
 
 ### Realizadas
  - [x] Calcularemos a incidência da COVID-19 no estado e por Município;
