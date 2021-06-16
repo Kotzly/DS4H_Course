@@ -28,7 +28,7 @@ Introduction: The COVID-19 pandemic caused by the SARS_COV_2 virus has taken on 
 Please watch the project presentation [video](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing).
 
 ## Objetivos do projeto??
-## Motivação
+## Motivação??
 
 ## Estrutura de arquivos e pastas
 
