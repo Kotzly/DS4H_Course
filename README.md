@@ -27,7 +27,8 @@ Introduction: The COVID-19 pandemic caused by the SARS_COV_2 virus has taken on 
 
 Please watch the project presentation [video](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing).
 
-
+## Objetivos do projeto??
+## Motivação
 
 ## Estrutura de arquivos e pastas
 
@@ -208,3 +209,12 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
 | Documentação                            |       |   |   | x | x     | x | x | x | x    | x | x |   |       |   |   |   |       |
 | Apresentação de resultados              |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
 
+## Evolução do Projeto
+
+## Resultados e Discussão
+
+## Conclusões
+
+## Trabalhos Futuros
+
+## Referências
