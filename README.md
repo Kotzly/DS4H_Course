@@ -27,12 +27,12 @@ Introduction: The COVID-19 pandemic caused by the SARS_COV_2 virus has taken on 
 
 Please watch the project presentation [video](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing).
 
-## Videos do Projeto
+# Videos do Projeto
 
-# Vídeo da Proposta
+## Vídeo da Proposta
 Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
 
-# Vídeo da Apresentação Final
+## Vídeo da Apresentação Final
 ????
 
 ## Slides do Projeto
