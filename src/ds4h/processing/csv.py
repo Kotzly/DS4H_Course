@@ -12,11 +12,12 @@ def join_sinasc_files(csv_folder, save_path=None, cols=None):
     for csv_filepath in csv_folder.glob("*.csv"):
 
         print("Loading", csv_filepath.name)
-        df = pd.read_csv(csv_filepath, usecols=cols)
+        df = pd.read_csv(csv_filepath)
         for column in cols:
             if not column in df.columns:
                 df[column] = np.nan
                 print(f"\tFile did not have column {column}, filling with NaN's.")
+        df = df[cols]
 
         union_df = df if union_df is None else pd.concat([union_df, df], axis=0)
 
