@@ -4,12 +4,6 @@ import numpy as np
 
 SINASC_COLS = ["DTNASC", "QTDFILVIVO", "QTDFILMORT", "IDADEMAE", "RACACOR", "RACACORMAE", "CODMUNNASC", "ESTCIVMAE", "ESCMAE", "PARTO", "IDANOMAL", "GESTACAO"]
 
-def fix_columns(df):
-    for column in SINASC_COLS:
-        if not column in df.columns:
-            df[column] = np.nan
-    return df
-
 def join_sinasc_files(csv_folder, save_path=None, cols=None):
     csv_folder = Path(csv_folder)
     cols = SINASC_COLS if cols is None else cols
@@ -19,7 +13,10 @@ def join_sinasc_files(csv_folder, save_path=None, cols=None):
 
         print("Loading", csv_filepath.name)
         df = pd.read_csv(csv_filepath, usecols=cols)
-        df = fix_columns(df)
+        for column in cols:
+            if not column in df.columns:
+                df[column] = np.nan
+                print(f"\tFile did not have column {column}, filling with NaN's.")
 
         union_df = df if union_df is None else pd.concat([union_df, df], axis=0)
 
