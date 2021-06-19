@@ -75,9 +75,9 @@ Você pode rodar o notebook com todas as análises atráves deste [Jupyter noteb
 ## Descrição Resumida do Projeto
 Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial. Atualmente (12/04/2021), ao nível global foram notificados cerca de 136,181,468, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 2,938,804 caso notificados. A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde. De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal que podem influenciar negativamente nos seus indicadores, como é o caso do número de nascidos vivos. Objetivo: o presente estudo tem o objetivo de avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo. Metodologia: será realizado uma análise de serie temporal, baseada em dados Sistema de Informações de Nascidos Vivos (SINASC/DATASUS) e do Banco de Dados de Síndrome Respiratória Aguda Grave (SRAG 2021), com o auxílio de métodos estatísticos  e de ferramentas inteligência artificial (métodos de aprendizado de maquinas) - SPSS Modeler 18.1, Google Colab e  Jupyter Notebook - realizaremos a modelagem, análise da curva de nascimentos vivos nos últimos 10 anos prévios a pandemia e a predição do número de nascidos vivos esperados para o ano 2020.  Resultados esperados: através desta pesquisa esperamos obter os padrões das curvas de nascidos vivos e estabelecer uma correlação entre a pandemia e o indicador de saúde materna e perinatal para os diferentes municípios do estado de São Paulo.
 
-## Abstract??? Não sei se precisa por. Tinha em alguns projetos mas não tá no modelo do professor
+## Abstract??? Charles
 
-# Videos do Projeto
+# Videos do Projeto  - Débora
 
 ## Vídeo da Proposta
 Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
@@ -85,13 +85,13 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 ## Vídeo da Apresentação Final  - Falta
 
 
-# Slides do Projeto - Falta
+# Slides do Projeto - Falta Débora
 
 ## Slides da Proposta - Falta
 ## Slides da Apresentação Final - Falta
 
-# Introdução e Referenciais de Teóricos - Falta
-> Contextualização do projeto
+# Introdução e Referenciais de Teóricos - Charles
+> Contextualização do projeto 
 >
 > Caracterização do problema
 >
@@ -109,22 +109,22 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
  - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
  - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
 
-# Objetivos do Projeto - Falta
+# Objetivos do Projeto - Charles
 > Como seu projeto propôs abordar o problema apresentado.
 
-# Metodologia
+# Metodologia Paulo
 
 Utilização de análise estatística e testes de hipótese para verificação da primeira pergunta de pesquisa. Criação de modelos estatísticos para avaliação do impacto de diferentes variáveis populacionais no impacto do número de nascidos vivos.
 
 Utilização de Aprendizado de Máquina e modelos estatísticos para predição de eventos futuros utilizando os dados à disposição. Análise do impacto das variáveis preditoras do número de nascidos vivos para explicação dos fenômenos encontrados.
 
-## Bases de Dados
+## Bases de Dados Débora(bases de dados 2)
 
  - [Sistema de Informação de Nascidos Vivos](https://datasus.saude.gov.br/transferencia-de-arquivos/) (SINASC/DATASUS), website do ministério da saúde
 
  - [Banco de Dados de Síndrome Respiratória Aguda Grave](https://opendatasus.saude.gov.br/dataset/bd-srag-2021) - incluindo dados da COVID-19
 
-## Variáveis de interesse
+## Variáveis de interesse  
 
  - Tamanho da população do estado de São Paulo e dos municípios;
  - Número de casos de COVID-19 no estado e por município de São Paulo;
@@ -139,9 +139,9 @@ Utilização de Aprendizado de Máquina e modelos estatísticos para predição 
  - Número de filhos vivos;
  - Número de filhos mortos.
 
-### Integração entre Bases e Análise Exploratória ??? Não sei se precisa por ou não, tá no modelo do professor
+### Integração entre Bases e Análise Exploratória ??? Silvia
 
-# Análises Realizadas - Falta
+# Análises Realizadas - Silvia - Dados faltantes, Estatística, dos gráficos. Paulo Modelos, analises estatística. 
 > Descrição detalhada das análises realizadas.
 
 ## Ferramentas
@@ -166,9 +166,9 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
 
 # Conclusão - Falta
 
-# Trabalhos Futuros - Falta
+# Trabalhos Futuros - Charles
 
-# Referências Bibliográficas - Falta
+# Referências Bibliográficas - Charles, Silvia, Débora, Paulo
 
 ## Tarefas 
 
