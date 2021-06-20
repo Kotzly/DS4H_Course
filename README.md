@@ -147,7 +147,11 @@ Para a modelagem, utilizou-se um modelo baseado em recorrências. Uma amostra é
 
     \hat{Y}_{year, month} = \sum _{i=1}^{N_{years}}  w^Y_i * Y_{year-i, month} + \sum _{i=1}^{N_{months}}  w^M_i * Y_{year, month-i} + w^T*(year - 2000) + \theta_{month} + \theta 
 
-Onde w^Y_i e w^M_i são os parametros da recorrência dos anos anterioes e dos meses anterioes, respectivamente, w^Y é o parâmetro de tendência, \theta_{month} é um parâmetro relativo ao mês *month*, e \theta é o *bias* do modelo. 
+Onde w^Y_i e w^M_i são os parametros da recorrência dos anos anterioes e dos meses anterioes, respectivamente, w^Y é o parâmetro de tendência, \theta_{month} é um parâmetro relativo ao mês *month*, e \theta é o *bias* do modelo. Também é bom frisar que 
+    
+    Y_{2020, -1} = Y{2019, 11}
+    Y_{2020, -2} = Y{2019, 10}
+    ...
 
 Este modelo foi utilizado por utilizar duas recorrências interessantes, no mês e no ano. A recorrência nos valores do número de nascidos vivos dos meses anteriores faz com que o modelo capture características recentes do comportamento da série temporal, enquanto que a recorrência no número dos anos anteriores, para o mesmo mês, faz com que o modelo capture o comportamento daquele  mês especifico, para os anos anteriores (já que foi notado certa sazonalidade no número de nascidos vivos nos meses do ano). O parâmetro \theta_{month} também controlará o valor predito para cada mês especifico. O parâmetro *w^T* controla a tendência do número de nascidos vivos (e.g., se há uma tendência de decrescimento do número de nascidos vivos, todo mês, espera-se que *w^T* seja negativo). Por fim, \theta é o equivalente ao *intercept* desta modelagem.
 
