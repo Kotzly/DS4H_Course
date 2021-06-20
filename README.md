@@ -143,7 +143,7 @@ Silvia, Debora
 
 ## Modelagem
 Para a modelagem, utilizou-se um modelo baseado em recorrências. Uma amostra é o número de nascidos vivos em um mês de um determinado ano. O modelo é:
-    ![model image](./media/model.gif)
+    ![model image](./media/model.jpg)
 
     \hat{Y}_{year, month} = \sum _{i=1}^{N_{years}}  w^Y_i * Y_{year-i, month} + \sum _{i=1}^{N_{months}}  w^M_i * Y_{year, month-i} + w^T*(year - 2000) + \theta_{month} + \theta 
 
@@ -158,7 +158,7 @@ Serão utilizados dois conjuntos treino:
 
 Em ambos os casos, o conjunto de teste será o segundo semestre de 2020. Utilizaremos apenas o segundo semestre pois espera-se que haja um intervalo de pelo menos 8 meses desde o advento (começo do corona vírus) até vermos o impacto no número de nascidos vivos, devido ao número de meses que leva da concepção até o parto.
 
-Será criado um modelo para cada cidade, pois foi visto na análise exploratória que cada cidade tem comportamentos diferentes de tendência entre os anos e de sazonalidade entre os meses.
+Será criado um modelo para cada cidade, pois foi visto na análise exploratória que cada cidade tem comportamentos diferentes de tendência entre os anos e de sazonalidade entre os meses. A análise de resultados será feita utilizando-se a hipótese de que se houve um bom ajuste de parâmetros no treino, este modelo representa bem os dados de treinos, e caso o modelo performe mal no teste, há a possibilidade de que os dados de teste realmente estão diferentes dos dados de treino, portanto houve certa diferença no número de nascidos vivos do teste.
 
 ## Bases de Dados
 
