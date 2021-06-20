@@ -87,7 +87,7 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 
 # Slides do Projeto - Falta Débora
 
-## Slides da Proposta - Falta
+## Slides da Proposta - https://github.com/Kotzly/DS4H_Course/blob/main/Slides%20do%20Projeto
 ## Slides da Apresentação Final - Falta
 
 # Introdução e Referenciais de Teóricos - Charles
