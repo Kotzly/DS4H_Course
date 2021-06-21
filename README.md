@@ -76,6 +76,7 @@ Você pode rodar o notebook com todas as análises atráves deste [Jupyter noteb
 Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial. Atualmente (12/04/2021), ao nível global foram notificados cerca de 136,181,468, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 2,938,804 caso notificados. A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde. De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal que podem influenciar negativamente nos seus indicadores, como é o caso do número de nascidos vivos. Objetivo: o presente estudo tem o objetivo de avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo. Metodologia: será realizado uma análise de serie temporal, baseada em dados Sistema de Informações de Nascidos Vivos (SINASC/DATASUS) e do Banco de Dados de Síndrome Respiratória Aguda Grave (SRAG 2021), com o auxílio de métodos estatísticos  e de ferramentas inteligência artificial (métodos de aprendizado de maquinas) - Google Colab e  Jupyter Notebook - realizaremos a modelagem, análise da curva de nascimentos vivos nos últimos 10 anos prévios a pandemia e a predição do número de nascidos vivos esperados para o ano 2020.  Resultados esperados: através desta pesquisa esperamos obter os padrões das curvas de nascidos vivos e estabelecer uma correlação entre a pandemia e o indicador de saúde materna e perinatal para os diferentes municípios do estado de São Paulo.
 
 ## Abstract??? Charles
+Introduction: The COVID-19 pandemic caused by the SARS_COV_2 virus has reached alarming proportions worldwide. As of 21rst June 2021, 178,553,726 COVID-19 cases have been reported worldwide, Brazil being one of the most affected countries, with approximately 17,927,928 reported cases. The pandemic has affected the non-general population regardless of sex, race, and social strata, with a great impact on the health system. Among the effects of the pandemic on the health system, a significant disruption (interruption or reduction) in the provision of maternal and perinatal health services stand out.  The disruption of the sexual and reproductive health might have a significant negative impact on maternal and neonatal outcomes, such as the number of live births, preterm birth, and stillbirth and so on. Objective: This study aims was to assess the impact of the COVID-19 pandemic on the number of live births in the cities of the state of Sao Paulo. Methodology: a data-driven time series analysis (ecological study) was carried out, based on data from the Live Birth Information System (SINASC / DATASUS) and the Severe Acute Respiratory Syndrome Database (SRAG 2021). Using an artificial tools ( machine learning methods) - Google Colab and Jupyter Notebook - We conducted a statistical analysis based on  modelling, analysis of the curve of live births in the last 10 years prior to the pandemic and the prediction of the number of live births expected for the year 2020. Expected results: Through this research, we hope to obtain the patterns of the live birth curves and establish a correlation between the pandemic and the maternal and perinatal health indicator for the different municipalities of Sao Paulo state.
 
 # Videos do Projeto  - Débora
 
@@ -91,15 +92,14 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 ## Slides da Apresentação Final - Falta
 
 # Introdução e Referenciais de Teóricos - Charles
-> Contextualização do projeto 
->
-> Caracterização do problema
->
-> Motivação
->
-> Relevância
->
-> Trabalhos relacionados
+A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial (1). Atualmente (21/06/2021), ao nível global foram notificados cerca de 178.553.726, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 17,927,928 caso notificados (2). A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde.
+A implementação das medidas de mitigação da pandemia tais como a imposição de medidas restritivas para circulação de pessoas, encerramento de escolas e de atividade consideradas não essenciais, em locais onde são implementadas adequadamente, tem contribuído para a redução dos casos de infeção (3). 
+No Brasil, apesar da existência de um sistema de saúde robusto, a implementação de medidas político administrativas contraproducentes para a mitigação dos feitos da pandemia e a redução do financiamento do sistema público de saúde, Sistema Único de Saúde (SUS), tem contribuído para os efeitos devastadores da pandemia no país (4,5). 
+Os diversos sistemas de saúde, foram severamente afetados pela pandemia da COVID-19, e os efeitos foram mais significativos nos países de baixa e média renda, onde os recursos humanos, infraestruturas e o sistema de saúde são escassos e frágeis (6). Para reverter os efeitos da pandemia, os sistemas de saúde foram reorganizados a diferentes níveis, com redirecionamento de recursos humanos e infraestruturas para o enfretamento da pandemia (6).  
+De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal. Dados da literatura, indicam que ao nível mundial, os serviços de saúde sexual e reprodutiva, foram os mais severamente afetados.  Por exemplo, os dados do inquérito realizado pela Organização Mundial da Saúde (OMS) em 105 países, de diferentes regiões e continentes, sugerem que no início da pandemia provocou a redução ou interrupção do provimento dos serviços de saúde sexual e reprodutiva em mais de 50% dos países participantes (cerca de 68% dos serviços de planejamento familiar e 56% das consulta pré-natal) (7). 
+A redução ou interrupção destes serviços essenciais violam os princípios fundamentais dos direitos humanos. Adicionalmente, colocam em perigo a saúde materna e perinatal com aumento considerável da incidência de gravidez não planejada, abortos inseguros, óbitos fetais morbidade e mortalidade materna, comprometendo deste modo os ganhos alcançados nas últimas duas décadas na área de saúde e os objetivos de desenvolvimento sustentável, agenda 2030 (8,9). 
+Deste modo, o número de nascidos vivos pode ser um indicador chave para mensuração dos impactos da pandemia na saúde materna e perinatal. 
+
 >
 > Indicação (bastante resumida) da análise proposta
 >
@@ -110,7 +110,8 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
  - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
 
 # Objetivos do Projeto - Charles
-> Como seu projeto propôs abordar o problema apresentado.
+> Avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo
+> Desenhar modelos predictores de números de nascidos vivos com base em modelos matemáticos/machine learning. 
 
 # Metodologia Paulo
 
@@ -173,7 +174,20 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
 
 # Trabalhos Futuros - Charles
 
+A monitoria em tempo real dos impactos de eventos catastrófico na saúde e bem-estar da população afetada deve ser abordada de uma forma multifacetada. Por exemplo, o desenho e implementação de ferramentas de inteligência artificial através de modelagem matemática/ machine learning é fundamental para a monitoria em tempo real dos indicadores de saúde, principalmente dos grupos mais vulneráveis. A existência de dados/informações atempada e a possibilidade de obter predições acuradas desses indicadores possibilita a implementação e adequação de estratégias e políticas de saúde de acordo com a dinâmicas dos eventos catastróficos. 
+Estamos cintes que o modelo predictor desenvolvido carecem de aprimoramento, por pretendemos, nos próximos trabalhos, avaliar outas potencias variáveis predictoras como a taxa de fecundidade, o índice de desenvolvimento humano, a taxa de uso de contraceptivos moderno durante a fase aguda dos eventos catastróficos etc. que possam melhorar a capacidade preditora do modelo.  
+
 # Referências Bibliográficas - Charles, Silvia, Débora, Paulo
+1. Chen N, Zhou M, Dong X,  et al. Epidemiological and clinical characteristics of 99 cases of 2019 novel coronavirus pneumonia in Wuhan, China: a descriptive study. Lancet 2020;395:507-13.
+2. Dong E, Du H, Gardner L. An interactive web-based dashboard to track COVID-19 in real time. Lancet Infect Dis 2020;20:533-4.
+3. Nogueira J, Rocha DG, Akerman M. Políticas públicas adoptadas en la pandemia de la COVID-19 en tres países de América Latina: contribuciones de la Promoción de la Salud para no volver al mundo que existía. Global health Promotion 2020. Doi: https://doi.org/10.1177/1757975920977837
+4. Rocha R, Atun R, Massuda A, et al. Effect of socioeconomic inequalities and vulnerabilities on health-system preparedness and response to COVID-19 in Brazil: a comprehensive analysis. Lancet Glob Health 2021:S2214-109X(21)00081-4.
+5. Castro MC, Massuda A, Almeida G,  et al. Brazil's unified health system: the first 30 years and prospects for the future. Lancet 2019;394:345-56.
+6. Charles CM, Amoah EM,  Kourouma KR,  et al. The SARS-CoV-2 pandemic scenario in Africa: What should be done to address the needs of pregnant women? Int J Gynaecol Obstet 2020;151:468-70.
+7. World Health Organization. Pulse survey on continuity of essential health services during the COVID-19 pandemic: interim report, 27 August 2020. Geneva2020. Available at: https://www.who.int/publications/i/item/WHO-2019-nCoV-EHS_continuity-survey-2020.1.
+8. WHO, UNICEF and UNFPA. Maternal mortality: Levels and trends 2000 to 2017. Geneva 2019. Avalible at: https://www.who.int/reproductivehealth/publications/maternal-mortality-2000-2017/en/.
+9. Schaaf M, Boydell V, Belle SV, Brinkerhoff DW, George A. Accountability for SRHR in the context of the COVID-19 pandemic. Sex Reprod Health Matters 2020;28:1779634
+
 
 ## Tarefas 
 
