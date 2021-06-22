@@ -158,7 +158,11 @@ A tabela abaixo resume o p-value anova para as cidades do ranking levando em con
     - De 20 anos à 35 anos (A2);
     - Mais de 35 anos (A3);
 
-
+ Divisão étnica/racial  | Escolaridade  |
+ Brancos | Não Brancos  | Até 7 anos | 8 ou mais   |
+| ------------------- | ------------------- |
+|  Célula de conteúdo |  Célula de conteúdo |
+|  Célula de conteúdo |  Célula de conteúdo |
 
 
 
