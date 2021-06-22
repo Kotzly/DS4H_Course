@@ -119,6 +119,27 @@ Utilização de análise estatística e testes de hipótese para verificação d
 
 Utilização de Aprendizado de Máquina e modelos estatísticos para predição de eventos futuros utilizando os dados à disposição. Análise do impacto das variáveis preditoras do número de nascidos vivos para explicação dos fenômenos encontrados.
 
+## Análise estatística
+Durante a análise dos dados, decidimos realizar um teste de hipóteses sobre os dados. A hipótese nula defende a ideia de que não existe diferença entre os anos sem e com pandemia.
+A primeira dificuldade que encontramos foi a de achar um teste para um conjunto de dados pequeno e que pudesse ser usado por uma distribuição não normal. 
+Após inúmeras pesquisas, descobrimos que os testes não paramétricos não supõem uma distribuição específica para a população, esses testes podem ser especialmente úteis quando você tem uma amostra pequena e destruição não normal, que se identificava com a nossa amostra.
+Porém a exemplo dos testes que encontramos como o teste H de Kruskal-Wallis é uma versão não paramétrica da ANOVA, era necessário ter variáveis quantitativas, e o nosso modelo tem uma variável de resposta quantitativa e variáveis explicativa categórica.
+Diante dessa segunda dificuldade optamos por utilizar o Teste one way anova, e apesar do modelo não ter uma distribuição normal, foi o teste que mais deu significância.
+Portanto o teste escolhido foi One-way ANOVA que será executado levando em consideração as estratificações abaixo:
+   - Divisão étnica/racial:
+    - Apenas brancos;
+    - Apenas não-brancos.
+ - Divisão por escolaridade:
+    - Até 7 anos de estudos;
+    - 8 ou mais anos de estudos.
+ - Divisão por estado civil:
+    - Casada ou união estável;
+    - Solteira.
+ - Por idade:
+    - Menos de 20 anos (A1);
+    - De 20 anos à 35 anos (A2);
+    - Mais de 35 anos (A3);
+
 ## Bases de Dados
 
  - [Sistema de Informação de Nascidos Vivos](https://datasus.saude.gov.br/transferencia-de-arquivos/) (SINASC/DATASUS), website do ministério da saúde
