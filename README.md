@@ -75,7 +75,7 @@ Você pode rodar o notebook com todas as análises atráves deste [Jupyter noteb
 ## Descrição Resumida do Projeto
 Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial. Atualmente (12/04/2021), ao nível global foram notificados cerca de 136,181,468, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 2,938,804 caso notificados. A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde. De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal que podem influenciar negativamente nos seus indicadores, como é o caso do número de nascidos vivos. Objetivo: o presente estudo tem o objetivo de avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo. Metodologia: será realizado uma análise de serie temporal, baseada em dados Sistema de Informações de Nascidos Vivos (SINASC/DATASUS) e do Banco de Dados de Síndrome Respiratória Aguda Grave (SRAG 2021), com o auxílio de métodos estatísticos  e de ferramentas inteligência artificial (métodos de aprendizado de maquinas) - Google Colab e  Jupyter Notebook - realizaremos a modelagem, análise da curva de nascimentos vivos nos últimos 10 anos prévios a pandemia e a predição do número de nascidos vivos esperados para o ano 2020.  Resultados esperados: através desta pesquisa esperamos obter os padrões das curvas de nascidos vivos e estabelecer uma correlação entre a pandemia e o indicador de saúde materna e perinatal para os diferentes municípios do estado de São Paulo.
 
-## Abstract??? Charles
+## Abstract
 Introduction: The COVID-19 pandemic caused by the SARS_COV_2 virus has reached alarming proportions worldwide. As of 21rst June 2021, 178,553,726 COVID-19 cases have been reported worldwide, Brazil being one of the most affected countries, with approximately 17,927,928 reported cases. The pandemic has affected the non-general population regardless of sex, race, and social strata, with a great impact on the health system. Among the effects of the pandemic on the health system, a significant disruption (interruption or reduction) in the provision of maternal and perinatal health services stand out.  The disruption of the sexual and reproductive health might have a significant negative impact on maternal and neonatal outcomes, such as the number of live births, preterm birth, and stillbirth and so on. Objective: This study aims was to assess the impact of the COVID-19 pandemic on the number of live births in the cities of the state of Sao Paulo. Methodology: a data-driven time series analysis (ecological study) was carried out, based on data from the Live Birth Information System (SINASC / DATASUS) and the Severe Acute Respiratory Syndrome Database (SRAG 2021). Using an artificial tools ( machine learning methods) - Google Colab and Jupyter Notebook - We conducted a statistical analysis based on  modelling, analysis of the curve of live births in the last 10 years prior to the pandemic and the prediction of the number of live births expected for the year 2020. Expected results: Through this research, we hope to obtain the patterns of the live birth curves and establish a correlation between the pandemic and the maternal and perinatal health indicator for the different municipalities of Sao Paulo state.
 
 # Videos do Projeto  - Débora
@@ -91,7 +91,7 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 ## Slides da Proposta - https://github.com/Kotzly/DS4H_Course/blob/main/Slides%20do%20Projeto
 ## Slides da Apresentação Final - Falta
 
-# Introdução e Referenciais de Teóricos - Charles
+# Introdução e Referenciais de Teóricos 
 A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial (1). Atualmente (21/06/2021), ao nível global foram notificados cerca de 178.553.726, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 17,927,928 caso notificados (2). A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde.
 A implementação das medidas de mitigação da pandemia tais como a imposição de medidas restritivas para circulação de pessoas, encerramento de escolas e de atividade consideradas não essenciais, em locais onde são implementadas adequadamente, tem contribuído para a redução dos casos de infeção (3). 
 No Brasil, apesar da existência de um sistema de saúde robusto, a implementação de medidas político administrativas contraproducentes para a mitigação dos feitos da pandemia e a redução do financiamento do sistema público de saúde, Sistema Único de Saúde (SUS), tem contribuído para os efeitos devastadores da pandemia no país (4,5). 
@@ -109,11 +109,11 @@ Deste modo, o número de nascidos vivos pode ser um indicador chave para mensura
  - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
  - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
 
-# Objetivos do Projeto - Charles
+# Objetivos do Projeto 
 > Avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo
 > Desenhar modelos predictores de números de nascidos vivos com base em modelos matemáticos/machine learning. 
 
-# Metodologia Paulo
+# Metodologia 
 
 Utilização de análise estatística e testes de hipótese para verificação da primeira pergunta de pesquisa. Criação de modelos estatísticos para avaliação do impacto de diferentes variáveis populacionais no impacto do número de nascidos vivos.
 
@@ -166,7 +166,7 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
  - Número de filhos vivos;
  - Número de filhos mortos.
 
-### Integração entre Bases e Análise Exploratória ??? Silvia
+### Integração entre Bases e Análise Exploratória
 
 # Análises Realizadas - Silvia - Dados faltantes, Estatística, dos gráficos. Paulo Modelos, analises estatística. 
 > Descrição detalhada das análises realizadas.
@@ -214,12 +214,12 @@ Devido a dificuldade que encontramos para escolher um teste que se adequasse cor
 
 # Conclusão - Falta
 
-# Trabalhos Futuros - Charles
+# Trabalhos Futuros 
 
 A monitoria em tempo real dos impactos de eventos catastrófico na saúde e bem-estar da população afetada deve ser abordada de uma forma multifacetada. Por exemplo, o desenho e implementação de ferramentas de inteligência artificial através de modelagem matemática/ machine learning é fundamental para a monitoria em tempo real dos indicadores de saúde, principalmente dos grupos mais vulneráveis. A existência de dados/informações atempada e a possibilidade de obter predições acuradas desses indicadores possibilita a implementação e adequação de estratégias e políticas de saúde de acordo com a dinâmicas dos eventos catastróficos. 
 Estamos cintes que o modelo predictor desenvolvido carecem de aprimoramento, por pretendemos, nos próximos trabalhos, avaliar outas potencias variáveis predictoras como a taxa de fecundidade, o índice de desenvolvimento humano, a taxa de uso de contraceptivos moderno durante a fase aguda dos eventos catastróficos etc. que possam melhorar a capacidade preditora do modelo.  
 
-# Referências Bibliográficas - Charles, Silvia, Débora, Paulo
+# Referências Bibliográficas 
 1. Chen N, Zhou M, Dong X,  et al. Epidemiological and clinical characteristics of 99 cases of 2019 novel coronavirus pneumonia in Wuhan, China: a descriptive study. Lancet 2020;395:507-13.
 2. Dong E, Du H, Gardner L. An interactive web-based dashboard to track COVID-19 in real time. Lancet Infect Dis 2020;20:533-4.
 3. Nogueira J, Rocha DG, Akerman M. Políticas públicas adoptadas en la pandemia de la COVID-19 en tres países de América Latina: contribuciones de la Promoción de la Salud para no volver al mundo que existía. Global health Promotion 2020. Doi: https://doi.org/10.1177/1757975920977837
