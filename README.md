@@ -135,8 +135,7 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 # Objetivos do Projeto - Charles
 > Como seu projeto propôs abordar o problema apresentado.
 
-# Metodologia Paulo
-
+# Metodologia
 ## Análise estatística
 [TODO]
 Silvia, Debora
@@ -181,6 +180,16 @@ Será criado um modelo, com a mesma estrutura apresentada, para cada cidade. Tam
     - Mais de 35 anos (A3);
 
 Esta divisão é realizada para se verificar se a diferença ou não-diferença entre o número de nascidos vivos durante a pandemia de COVID-19 tem diferença ao se separar estas variáveis.
+
+### Comentário
+
+A estrutura do modelo utilizado foi encontrada empiricamente. Discutimos que realment seria interessante termos uma recorrência nos meses anteriores ao mês de predição, mas dificilmente este modelo era satisfatoriamente ajustado no treino (as métricas ficavam ruins). Ao se relembrar como a maioria das cidades apresenta certa sazonalidade no número de nascidos vivos, ou seja, a curva de todos os anos apresenta um "formato" parecido, pareceu-se interessante utilizar também componentes da recorrência com valores do mesmo mês, mas para anos anteriores.
+
+Esta modelagem melhorou os resultados, isto é, mais modelos tiverem resultados satisfatórios no treino e alguns começaram a generalizar para o teste. Após isto, verificou-se que certas cidade tem crescimentos ou decrescimentos dos números mensais e anuais de nascidos vivos constante, então se adicionou um parâmetro ao próprio valor do ano. O esperado é que, se, por exemplo, todo ano em média o número de nascidos vivos de uma cidade cair em 100, o parâmetro que multiplica o ano (wT) no modelo seja -100/12, ou algo próximo a isso. Também adicionou-se um parâmetro fixo por mês, que esperava-se que capture-se também o comportamente sazonal do número de nascidos vivos. 
+
+Com isto houve um número razoável de cidades que estavam sendo bem ajustadas ao treino, e que ainda conseguiam generalizar no teste. Para evitar um viés de escolha (remodelar o problema até termos bons resultados de teste), o ideal seria termos um conjunto de validação, onde validaríamos os nossos modelos, para no final termos o resultado no teste, mas como nosso objetivo de previsão era exatamente os 6 meses de pandemia e como temos 1 amostra por mês, seria impraticável diminuir ainda mais o conjunto de teste para separá-lo em validação (separar um pedaço do treino em validação seria inútil, já que o objetivo do modelo é predizer o número de NV durante a pandemia). Como isso não foi feito, tomou-se o cuidado de se passar por poucas rodadas de melhora do modelo, mas ainda é altamente provável que haja um viés ou estocasticidade de performance do modelo (o modelo funciona bem para uma cidade por "sorte", e não porque representa bem a realidade).
+
+Entretanto, considera-se a análise feita completamente válida, já que o modelo utilizado é relativamente simples, o que daria menos chance de ocorrer o overfitting do modelo, mas também não é tão simples (dado o número de amostras), o que também diminui a chance dele ir bem no teste por "sorte". Na seção de Discussão mostraremos como a análise feita se traduz para os valores reais utilizando também um pouco de visualização dos números por mês.
 
 ## Bases de Dados
 
@@ -232,6 +241,10 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
 # Resultados - Falta
 
 ## Modelos
+
+Na análise dos modelos criados se utilizou duas métricas avaliação, o R² e o MAPE (*Mean absolute percentage error*). A escolha do MAPE foi feita para se poder comparar na mesma escala diferentes cidades, o que não poderia ser feito com o MSE ou o MAE, por exemplo.
+
+Nas discussões sobre os resultados, nos referimos à um resultado como "bom" quando ele apresenta ou mais que 50% de R², ou menos de 10% de MAPE, ou ambos, e são considerados "ruins" caso contrário. Esses valores foram escolhidos por dividir de maneira satisfatória os resultados obtidos.
 
 ### Sem estratificação
 
@@ -318,6 +331,9 @@ Para esta população, em nenhuma cidade a modelagem conseguiu bom resultado de 
 
 ### ESCMAE >= 8 anos
 
+
+Neste caso, Guaíra, Dracena e Santa Isabel tiveram resultados não satisfatórios no treino, indicando um mau ajuste de parâmetros. Do restante, Santos e São Paulo tiveram boas métricas de R2, entranto algumas outras cidades, como Araçatuba e São José do Rio Preto obtiveram bons resultados de MAPE, indicando que o número de NV para estas cidades possa ter seguido um comportamento similar aos dos outros anos, para estas cidades. 
+
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
 |  0 | Andradina             |                       0.521 |                         0.115 |                     -0.565 |                        0.146 |                       0.507 |                         0.118 |                     -1.176 |                        0.18  |
@@ -334,6 +350,10 @@ Para esta população, em nenhuma cidade a modelagem conseguiu bom resultado de 
 | 11 | Todas cidades         |                       0.911 |                         0.018 |                      0.847 |                        0.012 |                       0.906 |                         0.019 |                      0.837 |                        0.012 |
 
 ### ESTCIVMAE = Casada ou União estável
+
+Para o caso de mães casadas ou em união estável, As cidades de Barueri, São Paulo, Santos e São José do Rio Preto tiveram bons ajustes no treino. Estas cidades também obtiveram bons resultados de MAPE no teste (ainda que São José do Rio Preto e Barueri tiveram valores de R2 baixos). Para os restante das cidades, não se pode concluir se houve ou não houve diferença, já que o modelo não representa bem os anos anteriores.
+
+
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
 |  0 | Andradina             |                       0.293 |                         0.138 |                     -0.525 |                        0.215 |                       0.272 |                         0.141 |                     -1.173 |                        0.26  |
@@ -351,6 +371,8 @@ Para esta população, em nenhuma cidade a modelagem conseguiu bom resultado de 
 
 ### ESTCIVMAE = Solteira
 
+Para este caso, apenas Andradina e São Caetano do Sul não tiveram bons ajustes no treino. Do restante, Araçatuba, São Paulo, Santos e São José do Rio Preto tiveram bons resultados de teste. Isto pode indicar que Barueri, Dracena, Guaíra, Jales e Santa Isabel tiveram mudanças no comportamento do número de NV no período.
+
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
 |  0 | Andradina             |                       0.407 |                         0.154 |                     -0.028 |                        0.155 |                       0.393 |                         0.153 |                     -0.239 |                        0.174 |
@@ -367,6 +389,9 @@ Para esta população, em nenhuma cidade a modelagem conseguiu bom resultado de 
 | 11 | Todas cidades         |                       0.972 |                         0.024 |                      0.598 |                        0.015 |                       0.969 |                         0.025 |                      0.504 |                        0.017 |
 
 ### AGEGROUP = A1
+
+Aqui Andradina, Dracena, Guaíra, Jales e Santa Isabel não tiveram bons ajustes de treino, gerando resultado inconclusivos. Para o restante, apenas São Paulo teve boa métrica de teste, indicando que para ele não houve diferença significativa do número de nascidos vivos, mas para Santos, São Caetano do Sul, São José do Rio Preto, Barueri e Araçatuba houve diferença.
+
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
 |  0 | Andradina             |                       0.432 |                         0.327 |                     -0.469 |                        0.292 |                       0.367 |                         0.316 |                     -1.116 |                        0.363 |
@@ -383,6 +408,8 @@ Para esta população, em nenhuma cidade a modelagem conseguiu bom resultado de 
 | 11 | Todas cidades         |                       0.974 |                         0.027 |                     -0.299 |                        0.044 |                       0.968 |                         0.026 |                     -0.552 |                        0.049 |
 
 ### AGEGROUP = A2
+
+Para o AGEGROUP A2 as cidades de Andradina, Araçatuba, Dracena, Guaíra e Santa Isabel não tiveram bons ajustes de treino, também gerando resultado inconclusivos. Para as cidades restantes, São Caetano do Sul não obteve boa métrica de teste, indicando diferença no número de nascidos vivos, o que não ocorre com Barueri, São Paulo, Jales, e São José do Rio Preto.
 
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
@@ -401,6 +428,8 @@ Para esta população, em nenhuma cidade a modelagem conseguiu bom resultado de 
 
 ### AGEGROUP = A3
 
+Para o AGEGROUP A3 as cidades de Andradina, Dracena, Guaíra e Santa Isabel não tiveram bons ajustes de treino, gerando resultado inconclusivos. Para as demais cidades, apenas São Paulo, Santos e São José do Rio Preto tiveram bons resultados no teste, enquanto as outras cidades obtiverem métricas consideradas ruins, indicando diferença da previsão do modelo em relação à realidade.
+
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
 |  0 | Andradina             |                       0.464 |                         0.256 |                     -0.251 |                        0.234 |                       0.455 |                         0.254 |                     -0.542 |                        0.259 |
@@ -418,9 +447,36 @@ Para esta população, em nenhuma cidade a modelagem conseguiu bom resultado de 
 
 
 
-# Discussão - Falta
+# Discussão
+
+Cidades como Guaíra, Dracena e Andradina tiveram maus ajustes de parâmetros de treino para a maioria das estratificações, o que não nos permite tirar muitas conclusões sobre o comportamento do número de nascidos vivos destas cidades. O que se pode afirmar é o modelo escolhido provavelmente não é adequado para estas cidades, ou porque ele não captura a dinâmica do número de NV delas ou porque este número é demasiadamente ruidoso ou aleatório. Para verificarmos isso, podemos observar os gráficos dos números de nascidos vivos durante os anos de 2006 à 2020 para Santos e São Paulo (cidades com bons ajustes), e Dracena e Guaíra (cidade com ajustes majoritariamente ruins):
+
+![Sâo Paulo](./media/saopaulo.png)
+![Santos](./media/santos.png)
+![Dracena](./media/dracena.png)
+![Guaíra](./media/guaíra.png)
+
+ 
+Claramente se vê que São Paulo e santos seguem um padrão e há uma sazonalidade relativamente comportada entre os meses. Por exemplo, quase todos os anos, em Santos, o número de nascidos vivos cai a partir no mês de junho até novembro, e sobe novamente em dezembro. Dito isso, pode-se ver também que é mais difícil detectar certo padrão nos números de Guaíra e Dracena, e isto muito provavelmente se dá pela ordem de grandeza do número de nascidos vivos destas duas cidades, tendo no máximo pouco mais de 80 nascidos vivos no mês. Esse pouco número de NV o torna altamente sujeito a aleatoriedades e eventos esporádicos, tornando o modelo incapaz de se ajustar bem aos dados devido à alta incerteza. Esta incerteza pode se tornar ainda maior ao se estratificar o dataset, já que o número de NV em uma amostra será ainda menor.
+
+
+Para visualizarmos graficamente o que a análise feita pode indicar, vamos usar as cidades de São Paulo e São Caetano do Sul como exemplo, e os anos de 2015 à 2020.
+
+![São Paulo a partir de 2015](./media/spful.png)
+![São Caetano do Sul a partir de 2015](./media/saocaetanofull.png)
+
+Segundo à análise feita, o número de NV para São Paulo em 2020 foi o esperado pelo modelo. Pelo gráfico realmente os valores reais de 2020 parecem como esperado, há um decréscimo do número de todos os meses, como já bem acontecendo há alguns anos e o "formato" da curva do ano como um todo parece similar aos anos anteriores. Na mesma análise, São Caetano do Sul deu indícios de mudança de comportamento em 2020. Esse acontecimento é claramente visto no gráfico do número de NV da cidade: há um crescimento anormal no segundo semestre de 2020, principalmente no mês 10, que pode (ou não) ser consequência da pandemia. Isso é completamente discutível, já que o lockdown se deu na maioria das cidades brasileiras a partir de março, que fica exatamente 7 meses antes do mês 10.
+
+Outro exemplo é para a cidade de Santos, para AGEGROUP igual à A1 (mulheres com menos de 20 anos). Na análise concluimos que houve um diferença para esta cidade, no segundo semestre de 2020. O gráfico abaixo mostra o número por mês, a partir de 2015:
+ 
+![Santos a partir de 2015, AGEGROUP A1](./media/santosa1.png)
+
+Não se vê claramente uma diferença, apesar da análise a ter apontado. Isto poderia pedir por análise mais detalhadas, por mais visualizações ou pela pesquisa de diferentes modelos.
 
 # Conclusão - Falta
+
+Há diversas conclusões, reflexões e discussões que pode-se ter baseando-se nos resultados obtidos. Primeiramente, as cidade de São Paulo e Santos, quase que em todas análises, tiveram bons ajustes e boas métricas no teste, mesmo para as estratificações do dataset. Isto pode indicar que realmente o número de nascidos vivos não se alterou durante o semestre de 2020 para estas cidades.
+
 
 # Trabalhos Futuros - Charles
 
