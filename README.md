@@ -142,8 +142,7 @@ A primeira dificuldade que encontramos foi a de achar um teste para um conjunto 
 Após inúmeras pesquisas, descobrimos que os testes não paramétricos não supõem uma distribuição específica para a população, esses testes podem ser especialmente úteis quando você tem uma amostra pequena e destruição não normal, que se identificava com a nossa amostra.
 Porém a exemplo dos testes que encontramos como o teste H de Kruskal-Wallis é uma versão não paramétrica da ANOVA, era necessário ter variáveis quantitativas, e o nosso modelo tem uma variável de resposta quantitativa e variáveis explicativa categórica.
 Diante dessa segunda dificuldade optamos por utilizar o Teste one way anova, e apesar do modelo não ter uma distribuição normal, foi o teste que mais deu significância.
-No notebook, mantemos os testes realizados, Shapiro-Wilk statistic, Kolmogorov-Smirnov test statistic, e One-way ANOVA.
-A tabela abaixo resume o p-value anova para as cidades do ranking levando em consideração as estratificações abaixo.
+Portanto o teste escolhido foi One-way ANOVA que será executado levando em consideração as estratificações abaixo:
    - Divisão étnica/racial:
     - Apenas brancos;
     - Apenas não-brancos.
@@ -157,11 +156,6 @@ A tabela abaixo resume o p-value anova para as cidades do ranking levando em con
     - Menos de 20 anos (A1);
     - De 20 anos à 35 anos (A2);
     - Mais de 35 anos (A3);
-
-| Primeiro cabeçalho  |  Segundo cabeçalho  |
-| ------------------- | ------------------- |
-|  Célula de conteúdo |  Célula de conteúdo |
-|  Célula de conteúdo |  Célula de conteúdo |
 
 
 
@@ -264,6 +258,30 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
  - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis e métodos de [XAI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
 
 # Resultados
+
+## Análise estatística.
+
+A tabela abaixo resume o p-value anova para as cidades do ranking levando em consideração as estratificações definidas na modelagem.
+Devido a dificuldade que encontramos para escolher um teste que se adequasse corretamente ao conjunto de dados, não conseguimos afirmar que o valor alto de p-value se refere a não negativa da hipótese nula ou se o resultado que se deu é devido a não adequação do teste ao conjunto de dados, porém ano analisar os dados através do gráficos e valores absolutos, observamos uma tendência de não rejeição da hipótese nula, não conseguimos identificar diferença entre os meses com e sem pandemia. 
+
+
+
+
+  Cidade               | Brancos             | Não Brancos         |Até 7 anos de estudos|8 ou mais anos de estudos|Casada ou união estável|Solteira|A1     |A2     |A3
+| ---------------------| ------------------- | ------------------- | ------------------- |------------------------ |---------------------- |--------|-------|-----  |
+| Andradina            |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| Araçatuba            |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| Barueri              |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| Dracena              |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| Guaíra               |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| Jales                |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| Santa Isabel         |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| São Caetano do Sul   |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| Santos               |  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+| São José do Rio Preto|  0.9348827514154132 |                     |                     |                         |                       |        |       |       |
+
+
+
 
 ## Modelos
 
