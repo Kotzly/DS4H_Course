@@ -238,11 +238,11 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
  - Testes de hipótese (comparação entre os número de nascidos vivos, entre as proporções de nascidos vivos entre subamostras da população, testes de normalidade).
  - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis e métodos de [XAI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
 
-# Resultados - Falta
+# Resultados
 
 ## Modelos
 
-Na análise dos modelos criados se utilizou duas métricas avaliação, o R² e o MAPE (*Mean absolute percentage error*). A escolha do MAPE foi feita para se poder comparar na mesma escala diferentes cidades, o que não poderia ser feito com o MSE ou o MAE, por exemplo.
+Na análise dos modelos criados se utilizou duas métricas avaliação, o R² e o MAPE (*Mean absolute percentage error*). A escolha do MAPE foi feita para se poder comparar diferentes cidades na mesma escala, o que não poderia ser feito com o MSE ou o MAE, por exemplo.
 
 Nas discussões sobre os resultados, nos referimos à um resultado como "bom" quando ele apresenta ou mais que 50% de R², ou menos de 10% de MAPE, ou ambos, e são considerados "ruins" caso contrário. Esses valores foram escolhidos por dividir de maneira satisfatória os resultados obtidos.
 
@@ -255,7 +255,7 @@ Para os demais anos, os resultados indicam que houve diferença no número de na
 
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
-|  0 | Andradina             |                      <span style="color:blue">0.459</span>  |                         0.109 |                     -0.414 |                        0.141 |                       0.445 |                         0.11  |                     -0.857 |                        0.164 |
+|  0 | Andradina             |                      0.459  |                         0.109 |                     -0.414 |                        0.141 |                       0.445 |                         0.11  |                     -0.857 |                        0.164 |
 |  1 | Araçatuba             |                       0.591 |                         0.057 |                      0.454 |                        0.035 |                       0.576 |                         0.06  |                      0.247 |                        0.045 |
 |  2 | Barueri               |                       0.839 |                         0.047 |                      0.377 |                        0.084 |                       0.832 |                         0.047 |                      0.329 |                        0.086 |
 |  3 | São Paulo             |                       0.915 |                         0.018 |                      0.613 |                        0.018 |                       0.898 |                         0.018 |                      0.529 |                        0.019 |
@@ -270,7 +270,7 @@ Para os demais anos, os resultados indicam que houve diferença no número de na
 
 ### RACACOR = White
 
-No resultado apenas para as mães auto-declaradas brancas, o modelo não se ajustou bem nas cidades de Guaíra e Jales, segundo a métrica R2. Para a métrica MAPE, as cidades que se não ajustaram bem foram Andradina, Dracena, Guaíra e Santa Isabel. Do restante, apenas São Caetano do sul teve o MAPE > 10% no teste, podendo indicar que detectou-se mudança de comportamento do número de NV nesta cidade.
+No resultado apenas para as mães auto-declaradas brancas, o modelo não se ajustou bem nas cidades de Guaíra e Jales, segundo a métrica R2. Para a métrica MAPE, as cidades que se não ajustaram bem foram Andradina, Dracena, Guaíra e Santa Isabel. Do restante, apenas São Caetano do sul teve o MAPE > 10% no teste, podendo indicar que detectou-se mudança de comportamento do número de NV nesta cidade, e não houve mudança para as cidades demais (fora as cidades que não se ajustaram no treino, que tem resultados inconclusivos).
 
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
@@ -457,7 +457,7 @@ Cidades como Guaíra, Dracena e Andradina tiveram maus ajustes de parâmetros de
 ![Guaíra](./media/guaíra.png)
 
  
-Claramente se vê que São Paulo e santos seguem um padrão e há uma sazonalidade relativamente comportada entre os meses. Por exemplo, quase todos os anos, em Santos, o número de nascidos vivos cai a partir no mês de junho até novembro, e sobe novamente em dezembro. Dito isso, pode-se ver também que é mais difícil detectar certo padrão nos números de Guaíra e Dracena, e isto muito provavelmente se dá pela ordem de grandeza do número de nascidos vivos destas duas cidades, tendo no máximo pouco mais de 80 nascidos vivos no mês. Esse pouco número de NV o torna altamente sujeito a aleatoriedades e eventos esporádicos, tornando o modelo incapaz de se ajustar bem aos dados devido à alta incerteza. Esta incerteza pode se tornar ainda maior ao se estratificar o dataset, já que o número de NV em uma amostra será ainda menor.
+Claramente se vê que São Paulo e santos seguem um padrão e há uma sazonalidade relativamente comportada entre os meses. Por exemplo, quase todos os anos, em Santos, o número de nascidos vivos cai a partir no mês de junho até novembro, e sobe novamente em dezembro. Dito isso, pode-se ver também que é mais difícil detectar certo padrão nos números de Guaíra e Dracena, e isto muito provavelmente se dá pela ordem de grandeza do número de nascidos vivos destas duas cidades, tendo no máximo pouco mais de 80 nascidos vivos no mês. Esse pouco número de NV o torna altamente sujeito a aleatoriedades e eventos esporádicos, tornando o modelo incapaz de se ajustar bem aos dados devido à alta incerteza. Esta incerteza pode se tornar ainda maior ao se estratificar o *dataset*, já que o número de NV em uma amostra será ainda menor.
 
 
 Para visualizarmos graficamente o que a análise feita pode indicar, vamos usar as cidades de São Paulo e São Caetano do Sul como exemplo, e os anos de 2015 à 2020.
@@ -472,6 +472,10 @@ Outro exemplo é para a cidade de Santos, para AGEGROUP igual à A1 (mulheres co
 ![Santos a partir de 2015, AGEGROUP A1](./media/santosa1.png)
 
 Não se vê claramente uma diferença, apesar da análise a ter apontado. Isto poderia pedir por análise mais detalhadas, por mais visualizações ou pela pesquisa de diferentes modelos.
+
+Uma coisa interessante a se nota é para quase todos os casos de estratificação o uso do Fold 1, que tem mais dados, prejudica as métricas para o conjunto de treino. Isso pode indicar que os anos que ficam de fora no Fold 0 (2016 e 2017) realmente tem uma distribuição diferente (e têm, devido ao zika vírus), o modelo não é flexível o suficiente e tem dificuldades de se ajustar à esses anos anômalos. Entretanto, viu-se no teste novamente um pequena piora das métricas, mesmo usando os anos de zika vírus, que supostamente teriam maior semelhança com os meses de pandemia de 2020. Isto pode indicar, entre outras coisas:
+ - Que o modelo não teve capacidade de generalizar o conhecimento dos nos anos de zika vírus;
+ - ou que a distribuição dos dados nos anos de zika vírus é diferente do que do segundo semestre de 2020;
 
 # Conclusão - Falta
 
