@@ -252,12 +252,13 @@ Python | https://www.python.org/ | Python é uma linguagem de programação de a
 Jupyter Notebook | https://jupyter.org/ | Documento virtual que permite execução de rotinas usuais de programação e documentação de todo o processo de produção do código. No projeto será utilizado para o código de reestruturação da base de dados e para os modelos.
 Google Colab | https://colab.research.google.com/ | Similar ao jupyter notebook, o Colab é uma lista de células que podem conter textos explicativos ou códigos executáveis e suas respectivas saídas.
 R | https://www.rstudio.com/products/rstudio/download/#download | R é uma linguagem de programação multi-paradigma orientada a objetos, programação funcional, dinâmica, fracamente tipada, voltada à manipulação, análise e visualização de dados. No projeto se utilizou o RStudio como meio de instalação do R.
+Orange | https://orangedatamining.com/ | Orange é uma toolbox voltada para data mining, aprendizado de máquina e visualização. Nele é possível criar workflows de análises de dados, de processamento e visualizações.
 
 ### Ferramentas estatísticas
 O ferramental estatístico utilizado será o apresentado durante as aulas, mais os que os componentes do grupo tiverem conhecimento e julgarem adequados. Como já foi descrito, iremos utilizar:
  - Regressão linear (no número de nascidos vivos).
  - Testes de hipótese (comparação entre os número de nascidos vivos, entre as proporções de nascidos vivos entre subamostras da população, testes de normalidade).
- - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis e métodos de [XAI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
+ - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis (https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
 
 # Resultados
 
@@ -313,7 +314,7 @@ Também percebe-se que apenas para São Caetano houve diferença do treino para 
 
 ### RACACOR = White
 
-No resultado apenas para as mães auto-declaradas brancas, o foi identificado que houve mudança para Santa Isabel e São Caetano do Sul. Para Guaíra e Jales os resultados foram inconclusivos, e para o restante das cidades não foi apontada mudança no número de nascidos vivos.
+No resultado apenas para as mães auto-declaradas brancas, foi identificado que houve mudança para Santa Isabel e São Caetano do Sul. Para Guaíra e Jales os resultados foram inconclusivos, e para o restante das cidades não foi apontada mudança no número de nascidos vivos.
 
 |    | Cidade    |   Fold 0, Train, R2 |   Fold 0, Train, MAPE |   Fold 0, Test, R2 |   Fold 0, Test, MAPE |   Fold 1, Train, R2 |   Fold 1, Train, MAPE |   Fold 1, Test, R2 |   Fold 1, Test, MAPE |
 |---:|:----------------------|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|----------------------------:|------------------------------:|---------------------------:|-----------------------------:|
@@ -561,13 +562,12 @@ Para a segunda entrega:
     - [x] Plots com os número de nascidos vivos, estratificados pelas variáveis categóricas do dataset;
     - [x] Correlação entre as variáveis numéricas do dataset.
 
-### Previstas
-
- - [ ] Modelagem do número de nascidos vivos, com caráter preditivo.
-    - [ ] Análise do impacto das variáveis de entrada na predição do modelo;
-    - [ ] Verificação de se a modelagem muda para subamostras da população (apenas mulheres negras, ou apenas para alguma faixa etária, por exemplo);
-    - [ ] Criação de modelos por cidade avaliada.
- - [ ] Verificação, por cidade, do impacto da pandemia do COVID-19 por cidade avaliada.
+Entrega final:
+ - [x] Modelagem do número de nascidos vivos, com caráter preditivo.
+    - [x] Análise do impacto das variáveis de entrada na predição do modelo;
+    - [x] Verificação de se a modelagem muda para subamostras da população (apenas mulheres negras, ou apenas para alguma faixa etária, por exemplo);
+    - [x] Criação de modelos por cidade avaliada.
+ - [x] Verificação, por cidade, do impacto da pandemia do COVID-19 por cidade avaliada.
 
 
 # Cronograma
@@ -595,11 +595,11 @@ Para a segunda entrega:
 | Seleção de dados                        |       |   |   |   |       |   |   | x | x    |   |   |   |       |   |   |   |       |
 | Pré-processamento dos dados             |       |   |   |   |       |   |   |   | x    | x | x |   |       |   |   |   |       |
 | Processamento e transformação dos dados |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
-| Data Mining                             |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
-| Criação de modelos                      |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
-| Análise estatística                     |       |   |   |   |       |   |   |   |      |   | x |   |       |   |   |   |       |
+| Data Mining                             |       |   |   |   |       |   |   |   |      |   | x |   |       | x | x |   |       |
+| Criação de modelos                      |       |   |   |   |       |   |   |   |      |   |   |   |       | x | x |   |       |
+| Análise estatística                     |       |   |   |   |       |   |   |   |      |   | x |   |       |   | x |   |       |
 | Avaliação dos modelos                   |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
-| Documentação                            |       |   |   | x | x     | x | x | x | x    | x | x |   |       |   |   |   |       |
-| Apresentação de resultados              |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
+| Documentação                            |       |   |   | x | x     | x | x | x | x    | x | x |   |   x   | x | x | x |       |
+| Apresentação de resultados              |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   | x |   x   |
 
 
