@@ -331,6 +331,11 @@ No resultado apenas para as mães auto-declaradas brancas, foi identificado que 
 | 10 | São José do Rio Preto |                       0.78  |                         0.036 |                     -0.111 |                        0.035 |                       0.772 |                         0.037 |                     -0.397 |                        0.037 |
 | 11 | Todas cidades         |                       0.968 |                         0.022 |                      0.511 |                        0.022 |                       0.963 |                         0.023 |                      0.369 |                        0.024 |
 
+As figuras abaixo mostram o gráfico de nascidos vivos para os últimos cinco anos, a fim de mostrar como são as características desses dados que fizeram que a análise feita chegasse na conclusão que se chegou. Por exemplo, temos a cidade de Santa Isabel, para a qual foi apontada mudança do número de nascidos vivos, e Dracena, para a qual foi apontado que não houve mudança.
+
+![Santa Isabel](./media/santaisabelwhite.png)
+![Dracena](./media/dracenawhite.jpg)
+
 
 ### RACACOR != White
 
@@ -371,6 +376,10 @@ Para esta população, indicou-se mudança no número de nascidos vivos para as 
 | 10 | São José do Rio Preto |                       0.709 |                         0.115 |                     -0.087 |                        0.116 |                       0.702 |                         0.112 |                     -0.344 |                        0.119 |
 | 11 | Todas cidades         |                       0.99  |                         0.035 |                      0.303 |                        0.037 |                       0.989 |                         0.036 |                     -0.054 |                        0.047 |
 
+A seguir se tem os plots do número de nascidos vivos de Barueri e de São Paulo, para a população de mulheres com 7 ou menos anos de estudos.
+
+![Barueri](./media/barueriest7.png)
+![São Paulo](./media/saopauloest7.jpg)
 
 ### ESCMAE >= 8 anos
 
@@ -410,6 +419,12 @@ Para o caso de mães casadas ou em união estável, apenas detectou-se mudança 
 |  9 | São Caetano do Sul    |                       0.826 |                         0.158 |                      0.011 |                        0.186 |                       0.798 |                         0.162 |                     -0.111 |                        0.197 |
 | 10 | São José do Rio Preto |                       0.835 |                         0.046 |                      0.008 |                        0.037 |                       0.819 |                         0.048 |                     -0.161 |                        0.041 |
 | 11 | Todas cidades         |                       0.888 |                         0.021 |                      0.751 |                        0.022 |                       0.861 |                         0.022 |                      0.647 |                        0.024 |
+
+A seguir se tem os plots do número de nascidos vivos de Santos e São José do Rio Preto, para a estratificação apresentada.
+
+![Santos](./media/santoscasada.png)
+![São José do Rio Preto](./media/saojosecasada.jpg)
+
 
 ### ESTCIVMAE = Solteira
 
