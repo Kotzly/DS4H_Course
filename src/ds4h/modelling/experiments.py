@@ -120,7 +120,8 @@ def run_experiment_with_estratification(df, n_years=N_YEARS, n_months=N_MONTHS, 
             save_folder = Path(save_folder)
             save_folder.mkdir(exist_ok=True, parents=True)
             result_df.to_csv(save_folder / f"{fold}_{i}_filters_{filter_i}.csv")
-            json.dump(filters, save_folder / f"filters_{filter_i}.json")
+            with open(save_folder / f"filters_{filter_i}.json", "w") as jsol_file:
+                json.dump(filters, jsol_file)
 
         display(formatted_df)
         print("\n\n")
