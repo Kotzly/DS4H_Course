@@ -162,9 +162,6 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
  - Status marital;
  - Cor de pele/raça;
  - Tipo de parto;
- - Se nasceu com anomalia;
- - Número de filhos vivos;
- - Número de filhos mortos.
 
 ### Integração entre Bases e Análise Exploratória
 
