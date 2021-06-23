@@ -454,7 +454,7 @@ Cidades como Guaíra, Dracena e Andradina tiveram maus ajustes de parâmetros de
 ![Sâo Paulo](./media/saopaulo.png)
 ![Santos](./media/santos.png)
 ![Dracena](./media/dracena.png)
-![Guaíra](./media/guaíra.png)
+![Guaíra](./media/guaira.png)
 
  
 Claramente se vê que São Paulo e santos seguem um padrão e há uma sazonalidade relativamente comportada entre os meses. Por exemplo, quase todos os anos, em Santos, o número de nascidos vivos cai a partir no mês de junho até novembro, e sobe novamente em dezembro. Dito isso, pode-se ver também que é mais difícil detectar certo padrão nos números de Guaíra e Dracena, e isto muito provavelmente se dá pela ordem de grandeza do número de nascidos vivos destas duas cidades, tendo no máximo pouco mais de 80 nascidos vivos no mês. Esse pouco número de NV o torna altamente sujeito a aleatoriedades e eventos esporádicos, tornando o modelo incapaz de se ajustar bem aos dados devido à alta incerteza. Esta incerteza pode se tornar ainda maior ao se estratificar o *dataset*, já que o número de NV em uma amostra será ainda menor.
