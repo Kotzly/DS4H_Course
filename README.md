@@ -334,7 +334,7 @@ No resultado apenas para as mães auto-declaradas brancas, foi identificado que 
 As figuras abaixo mostram o gráfico de nascidos vivos para os últimos cinco anos, a fim de mostrar como são as características desses dados que fizeram que a análise feita chegasse na conclusão que se chegou. Por exemplo, temos a cidade de Santa Isabel, para a qual foi apontada mudança do número de nascidos vivos, e Dracena, para a qual foi apontado que não houve mudança.
 
 ![Santa Isabel](./media/santaisabelwhite.png)
-![Dracena](./media/dracenawhite.jpg)
+![Dracena](./media/dracenawhite.png)
 
 
 ### RACACOR != White
@@ -379,7 +379,7 @@ Para esta população, indicou-se mudança no número de nascidos vivos para as 
 A seguir se tem os plots do número de nascidos vivos de Barueri e de São Paulo, para a população de mulheres com 7 ou menos anos de estudos.
 
 ![Barueri](./media/barueriest7.png)
-![São Paulo](./media/saopauloest7.jpg)
+![São Paulo](./media/saopauloest7.png)
 
 ### ESCMAE >= 8 anos
 
@@ -423,7 +423,7 @@ Para o caso de mães casadas ou em união estável, apenas detectou-se mudança 
 A seguir se tem os plots do número de nascidos vivos de Santos e São José do Rio Preto, para a estratificação apresentada.
 
 ![Santos](./media/santoscasada.png)
-![São José do Rio Preto](./media/saojosecasada.jpg)
+![São José do Rio Preto](./media/saojosecasada.png)
 
 
 ### ESTCIVMAE = Solteira
