@@ -137,8 +137,27 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 
 # Metodologia
 ## Análise estatística
-[TODO]
-Silvia, Debora
+Durante a análise dos dados, decidimos realizar um teste de hipóteses sobre os dados. A hipótese nula defende a ideia de que não existe diferença entre os anos sem e com pandemia.
+A primeira dificuldade que encontramos foi a de achar um teste para um conjunto de dados pequeno e que pudesse ser usado por uma distribuição não normal. 
+Após inúmeras pesquisas, descobrimos que os testes não paramétricos não supõem uma distribuição específica para a população, esses testes podem ser especialmente úteis quando você tem uma amostra pequena e destruição não normal, que se identificava com a nossa amostra.
+Porém a exemplo dos testes que encontramos como o teste H de Kruskal-Wallis é uma versão não paramétrica da ANOVA, era necessário ter variáveis quantitativas, e o nosso modelo tem uma variável de resposta quantitativa e variáveis explicativa categórica.
+Diante dessa segunda dificuldade optamos por utilizar o Teste one way anova, e apesar do modelo não ter uma distribuição normal, foi o teste que mais deu significância.
+Portanto o teste escolhido foi One-way ANOVA que será executado levando em consideração as estratificações abaixo:
+   - Divisão étnica/racial:
+    - Apenas brancos;
+    - Apenas não-brancos.
+ - Divisão por escolaridade:
+    - Até 7 anos de estudos;
+    - 8 ou mais anos de estudos.
+ - Divisão por estado civil:
+    - Casada ou união estável;
+    - Solteira.
+ - Por idade:
+    - Menos de 20 anos (A1);
+    - De 20 anos à 35 anos (A2);
+    - Mais de 35 anos (A3);
+
+
 
 ## Modelagem
 Para a modelagem, utilizou-se um modelo linear baseado em recorrências. Uma amostra é o número de nascidos vivos em um mês de um determinado ano. O modelo é:
@@ -241,6 +260,31 @@ O ferramental estatístico utilizado será o apresentado durante as aulas, mais 
  - Aprendizado de máquina (técnicas de validação de modelos estatísticos, métricas, métodos explicáveis e métodos de [XAI](https://en.wikipedia.org/wiki/Explainable_artificial_intelligence)).
 
 # Resultados
+
+## Análise estatística.
+
+A tabela abaixo resume o p-value anova para as cidades do ranking levando em consideração as estratificações definidas na modelagem.
+Devido a dificuldade que encontramos para escolher um teste que se adequasse corretamente ao conjunto de dados, não conseguimos afirmar que o valor alto de p-value se refere a não negativa da hipótese nula ou se o resultado que se deu é devido a não adequação do teste ao conjunto de dados, porém ano analisar os dados através do gráficos e valores absolutos, observamos uma tendência de não rejeição da hipótese nula, não conseguimos identificar diferença entre os meses com e sem pandemia. 
+
+
+
+
+| Cidade               | Brancos             | Não Brancos         |Até 7 anos de estudos|8 ou mais anos de estudos|Casada ou união estável|Solteira|A1     |A2     |A3|
+| ---------------------| ------------------- | ------------------- | ------------------- |------------------------ |---------------------- |--------|-------|-----  |-----|
+| Andradina            |  0.9348827514154132 | 0.17513080603908623 |0.04463085084860029  |0.5563699040316381       |0.4173882295531922     |0.17390938991860963|0.01069319940495801|0.7465306852325151|0.09651183439707238|
+| Araçatuba            |0.6415888520718181|0.22667186160129166|0.07300371075550745|0.22330008513509036|0.9501226225546695|0.782918933672756|0.10313674412159318|0.8997025974823041|0.10703998647836391|
+| Barueri              |0.3044513700445403|0.22111266328049684|0.04869239516627025|0.6355534071454625|0.3771867388024749|0.16956001837706222|0.015049475878195894|0.09588655925498574|0.35502898650621106|
+| São Paulo            |0.9592703692450071|0.22369263962766847|0.09651717145315583|0.898503911622669|0.5741764992686036|0.10202734063378571|0.022574204103810943|0.013349831854615071|0.12545464295695066|
+| Dracena              |0.6436491753251021|0.23357831808524507|0.03128676166492906|0.957264823839042|0.08051030418149387|0.13507637866578293|0.025406299687495956|0.415867669527038|0.12742786976771722|
+| Guaíra               |0.9177353289298512|0.18649112624658404|0.1443583685289298|0.9543220144116332|0.8685382013239737|0.5250873607338962|0.016365713074422316|0.40544023304473664|0.2120467554031652|
+| Jales                |0.46046695977722973|0.16288490449431692|0.057893547203380955|0.06587109369620811|0.1716469158184669|0.19415651763043026|0.00991052353725434|0.2691628094501288|0.019995111243597118|
+| Santa Isabel         |0.7473338512707313|0.196446914811358|0.13973972416514244|0.83538051556331|0.3975422123889091|0.1639656852364353|0.01608256134909194|0.4095507642089896|0.0881615795674582|
+| São Caetano do Sul   |0.4547108251534536|0.30886801842576805|0.0857526541567079|0.20017939238577281|0.22099725927055833|0.0856758742318781|0.010723327568025765|0.4887934026588501|0.08435094966870903|
+| Santos               |0.5984503220252172|0.30997439343148586|0.1456983918285436|0.9908743161471665|0.5244430259057227|0.22940335798434358|0.14787876716911072|0.11056668576594232|0.08585957689119841|
+| São José do Rio Preto|0.90546242355215|0.3453579222208589|0.08634419528026813|0.1079691244853812|0.14295300581063103|0.12494951515613205|0.00973959203277352|0.1243001841960537|0.05073157498192731|
+
+
+
 
 ## Modelos
 
