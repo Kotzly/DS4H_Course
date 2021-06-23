@@ -51,30 +51,30 @@ def statistical_report(df):
 
     print("Mulheres brancas")
     for cidade in df.MUNNAME.unique():
-        print(cidade)
+        print("\t" + cidade)
         dfWhite = create_dataframe(df, "RACACORMAE", "White",cidade)
         f_val, p_val = stats.ttest_ind(
             dfWhite[dfWhite.ISPANDEMIC == True]["DTNASC"],
             dfWhite[dfWhite.ISPANDEMIC == False]["DTNASC"],
         )
-        print ("\tOne-way ANOVA P =", p_val)
+        print ("\t\tOne-way ANOVA P =", p_val)
     print()
 
     print("Mulheres não-brancas")
     for cidade in df.MUNNAME.unique():
-        print(cidade)
+        print("\t" + cidade)
         dfBrown = create_dataframeraca(df, "ISWHITE",False,cidade)
         f_val, p_val = stats.ttest_ind(
             dfBrown[dfBrown.ISPANDEMIC == True]["DTNASC"],
             dfBrown[dfBrown.ISPANDEMIC == False]["DTNASC"],
         )
-        print ("\tOne-way ANOVA P =", p_val)
+        print ("\t\tOne-way ANOVA P =", p_val)
     print()
 
     for age_group in ("A1", "A2", "A3"):
         print(f"Mulheres em AGEGROUP {age_group}")
         for cidade in df.MUNNAME.unique():
-            print(cidade)
+            print("\t" + cidade)
             dfA1 = create_dataframe(df, "AGEGROUP", age_group,cidade)
             f_val, p_val = stats.ttest_ind(
                 dfA1[dfA1.ISPANDEMIC == True]["DTNASC"],
@@ -87,12 +87,12 @@ def statistical_report(df):
             print("\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
             print("\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
 
-            print ("\tOne-way ANOVA P =", p_val)
+            print ("\t\tOne-way ANOVA P =", p_val)
         print()
 
     print("Mulheres Casadas ou em União Estável")
     for cidade in df.MUNNAME.unique():
-        print(cidade)
+        print("\t" + cidade)
         dfMarried = create_dataframestatus(df,"ISMARRIED",True,cidade)
         f_val, p_val = stats.ttest_ind(
             dfMarried[dfMarried.ISPANDEMIC == True]["DTNASC"],
@@ -102,15 +102,15 @@ def statistical_report(df):
         X = dfMarried['DTNASC'].values
         shap_stat, spvalue = shapiro(X)
         k_stat, kpvalue = kstest((X - X.mean())/X.std(), "norm", N=len(X))
-        print("\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
-        print("\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
+        print("\t\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
+        print("\t\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
 
-        print ("\tOne-way ANOVA P =", p_val)
+        print ("\t\tOne-way ANOVA P =", p_val)
     print()
 
     print("Mulheres Solteiras")
     for cidade in df.MUNNAME.unique():
-        print(cidade)
+        print("\t" + cidade)
         dfSingle = create_dataframe(df, "ESTCIVMAE", "Single",cidade)
         f_val, p_val = stats.ttest_ind(
             dfSingle[dfSingle.ISPANDEMIC == True]["DTNASC"],
@@ -123,13 +123,13 @@ def statistical_report(df):
         print("\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
         print("\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
 
-        print ("\tOne-way ANOVA P =", p_val)
+        print ("\t\tOne-way ANOVA P =", p_val)
     print()
 
 
     print("Mulheres com 7 ou menos anos de estudos")
     for cidade in df.MUNNAME.unique():
-        print(cidade)
+        print("\t" + cidade)
         df12 = create_dataframeesc(df, "ISSEVEN", True,cidade)
         f_val, p_val = stats.ttest_ind(
             df12[df12.ISPANDEMIC == True]["DTNASC"],
@@ -147,7 +147,7 @@ def statistical_report(df):
 
     print("Mulheres com 8 ou mais anos de estudos")
     for cidade in df.MUNNAME.unique():
-        print(cidade)
+        print("\t" + cidade)
         df8 = create_dataframeesceight(df, "ISEIGHT", True,cidade)
         f_val, p_val = stats.ttest_ind(
             df8[df8.ISPANDEMIC == True]["DTNASC"],
