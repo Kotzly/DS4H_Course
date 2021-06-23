@@ -24,7 +24,7 @@ FILTERS_KWARGS_LIST = [
     
 ]
 
-def run_experiment_no_estratification(df, n_years=N_YEARS, n_months=N_MONTHS, use_year=USE_YEAR, save_path=None):
+def run_experiment_without_estratification(df, n_years=N_YEARS, n_months=N_MONTHS, use_year=USE_YEAR, save_path=None):
     results = []
     cities = list(df.MUNNAME.unique()) + [None]
     for _, fold in enumerate(FOLDS):
