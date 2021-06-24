@@ -9,7 +9,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 
 |Nome  | RA | Especialização|
 |--|--|--|
-|Charles M'poca Charles | 163383 | Saúde|
+| Charles M'poca Charles | 163383 | Saúde|
 | Silvia Arantes Pereira Olivio | 224932  | Computação|
 | Débora Rocha Helfstein  | 234934  | Farmacêutica|
 | Paulo Augusto Alves Luz Viana | 263889 | Elétrica |
@@ -30,7 +30,7 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 
 ## Vídeo da Apresentação Final
 
-Assista o [**vídeo final de apresentação do projeto**](https://drive.google.com/file/d/1zpTE-o8FtsIkw8usp5e2mev-2MuZLujn/view?usp=sharing).
+Assista o [**vídeo d Apresentação Final do projeto**](https://drive.google.com/file/d/1zpTE-o8FtsIkw8usp5e2mev-2MuZLujn/view?usp=sharing).
 
 # Slides do Projeto
 
@@ -105,11 +105,9 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
     - De 20 anos à 35 anos (A2);
     - Mais de 35 anos (A3);
 
-
-
 ## Modelagem
 Para a modelagem, utilizou-se um modelo linear baseado em recorrências. Uma amostra é o número de nascidos vivos em um mês de um determinado ano. O modelo é:
-    ![model image](./media/assets/images/model.jpg)
+    ![model image](./assets/images/model.jpg)
 
     \hat{Y}_{year, month} = \sum _{i=1}^{N_{years}}  \left ( w^Y_i * Y_{year-i, month} \right ) + \sum _{i=1}^{N_{months}}  \left (  w^M_i * Y_{year, month-i} \right ) + \left ( w^T*(year - 2000) \right ) + \theta_{month} + \theta 
 
@@ -150,16 +148,6 @@ Será criado um modelo, com a mesma estrutura apresentada, para cada cidade. Tam
 
 Esta divisão é realizada para se verificar se a diferença ou não-diferença entre o número de nascidos vivos durante a pandemia de COVID-19 tem diferença ao se separar estas variáveis.
 
-### Comentário
-
-A estrutura do modelo utilizado foi encontrada empiricamente. Discutimos que realment seria interessante termos uma recorrência nos meses anteriores ao mês de predição, mas dificilmente este modelo era satisfatoriamente ajustado no treino (as métricas ficavam ruins). Ao se relembrar como a maioria das cidades apresenta certa sazonalidade no número de nascidos vivos, ou seja, a curva de todos os anos apresenta um "formato" parecido, pareceu-se interessante utilizar também componentes da recorrência com valores do mesmo mês, mas para anos anteriores.
-
-Esta modelagem melhorou os resultados, isto é, mais modelos tiverem resultados satisfatórios no treino e alguns começaram a generalizar para o teste. Após isto, verificou-se que certas cidade tem crescimentos ou decrescimentos dos números mensais e anuais de nascidos vivos constante, então se adicionou um parâmetro ao próprio valor do ano. O esperado é que, se, por exemplo, todo ano em média o número de nascidos vivos de uma cidade cair em 100, o parâmetro que multiplica o ano (wT) no modelo seja -100/12, ou algo próximo a isso. Também adicionou-se um parâmetro fixo por mês, que esperava-se que capture-se também o comportamente sazonal do número de nascidos vivos. 
-
-Com isto houve um número razoável de cidades que estavam sendo bem ajustadas ao treino, e que ainda conseguiam generalizar no teste. Para evitar um viés de escolha (remodelar o problema até termos bons resultados de teste), o ideal seria termos um conjunto de validação, onde validaríamos os nossos modelos, para no final termos o resultado no teste, mas como nosso objetivo de previsão era exatamente os 6 meses de pandemia e como temos 1 amostra por mês, seria impraticável diminuir ainda mais o conjunto de teste para separá-lo em validação (separar um pedaço do treino em validação seria inútil, já que o objetivo do modelo é predizer o número de NV durante a pandemia). Como isso não foi feito, tomou-se o cuidado de se passar por poucas rodadas de melhora do modelo, mas ainda é altamente provável que haja um viés ou estocasticidade de performance do modelo (o modelo funciona bem para uma cidade por "sorte", e não porque representa bem a realidade).
-
-Entretanto, considera-se a análise feita completamente válida, já que o modelo utilizado é relativamente simples, o que daria menos chance de ocorrer o overfitting do modelo, mas também não é tão simples (dado o número de amostras), o que também diminui a chance dele ir bem no teste por "sorte". Na seção de Discussão mostraremos como a análise feita se traduz para os valores reais utilizando também um pouco de visualização dos números por mês.
-
 ## Análise estatística
 Durante a análise dos dados, decidimos realizar um teste de hipóteses sobre os dados. A hipótese nula defende a ideia de que não existe diferença entre os anos sem e com pandemia.
 A primeira dificuldade que encontramos foi a de achar um teste para um conjunto de dados pequeno e que pudesse ser usado por uma distribuição não normal. 
@@ -184,15 +172,12 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
 ## Bases de Dados
 
  - [Sistema de Informação de Nascidos Vivos](https://datasus.saude.gov.br/transferencia-de-arquivos/) (SINASC/DATASUS), website do ministério da saúde
-
  - [Banco de Dados de Síndrome Respiratória Aguda Grave](https://opendatasus.saude.gov.br/dataset/bd-srag-2021) - incluindo dados da COVID-19
- 
  - SP Contra o Novo Coronavírus (Seade/coronavírus) (https://www.saopaulo.sp.gov.br/coronavirus/)
- -
  - Biblioteca Virtual – São Paulo: população do municípios paulistas (http://www.bibliotecavirtual.sp.gov.br/temas/sao-paulo/sao-paulo-populacao-dos-municipios-paulistas.php)
 
 
-## Variáveis de interesse  
+### Variáveis de interesse  
 
  - Tamanho da população do estado de São Paulo e dos municípios;
  - Número de casos de COVID-19 no estado e por município de São Paulo;
@@ -204,7 +189,9 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
  - Cor de pele/raça;
  - Tipo de parto;
 
-### Integração entre Bases e Análise Exploratória
+## Integração entre Bases e Análise Exploratória
+
+Por favor, veja o notebook com o código do Projeto para ver como as bases foram integradas, e para ver o EDA realizado neste projeto.
 
 ## Análises Realizadas 
 
@@ -214,16 +201,16 @@ Durante o processo de Análise Exploratória dos dados, utilizamos como premissa
 Inicialmente já foi possível observar que para cada coluna existiam valores que não eram esperados, ou que eram equivalentes a valores faltantes. Por exemplo, para a coluna ESCMAE o valor 9 representa um valor ignorado, que não foi preenchido. Para a coluna IDADEMAE, o valor de 99 parece ser um erro, já que antes dele o maior valor de idade foi 65. Para a coluna QTDFILVIVO (quantidade de filhos vivos), apesar do número 30 também parecer absurdo, o número 99 também parece ser um erro.
 Estes valores foram substituídos por NULL, bem como certo valores estranhos, como o valor de 99 na colunas IDADEMAE (idade da mãe). Para as colunas categóricas, as categorias foram codificadas de 1 até N, sendo N o número de categorias. Desta maneira Valores maiores que N foram transformados em NULL, para que depois pudessem ser descartados durante as análises.
 
-	QTDFILVIVO: valores maiores que 30.
-	QTDFILMORT: valores maiores que 30.
-	IDADEMAE: valores maiores que 65.
-	ESTCIVMAE: valores maiores que 5.
-	PARTO: valores maiores que 2.
-	IDANOMAL: valores maiores que 2.
-	GESTACAO: valores maiores que 6.
-	RACACOR: valores maiores que 5.
-	RACACORMAE: valores maiores que 5.
-	ESCMAE: valores maiores que 5.
+ - QTDFILVIVO: valores maiores que 30.
+ - QTDFILMORT: valores maiores que 30.
+ - IDADEMAE: valores maiores que 65.
+ - ESTCIVMAE: valores maiores que 5.
+ - PARTO: valores maiores que 2.
+ - IDANOMAL: valores maiores que 2.
+ - GESTACAO: valores maiores que 6.
+ - RACACOR: valores maiores que 5.
+ - RACACORMAE: valores maiores que 5.
+ - ESCMAE: valores maiores que 5.
 
 Após essas alterações realizamos o cálculo de porcentagem de dados faltantes para cada variável, o maior valor observado estava na variável RACACORMAE que tinha 39% dos dados faltantes, as demais variáveis estavam entre 3 e 0%. Inicialmente optamos por utilizar o método complete-case analysis, que indica dropar os dados faltantes da base. Porém quando começamos a realizar a análise da qualidade dos dados, de afim validar possíveis discrepâncias e inconsistências, percebemos variáveis com valores 9 e 99, que segundo a descrição do dicionário de dados são valores ignorados, por isso substituímos estes valores por nulos.
 Para que as demais varáveis não fossem comprometidas, decidimos manter os registros com valores nulos no dataset uma vez que a maioria dos métodos estatísticos em python já desconsideram estes valores.
@@ -242,30 +229,33 @@ O arquivos ./assets/AnalysisPrism.pdf mostra os mesmos plots, mas também as tab
 
 Ao gerar os plots algumas observações foram geradas:
 
-•	Proporcionalmente, mulheres que tiveram entre 8 e 11 anos de escolaridade são maioria, seguidas das que tiveram 12 ou mais. 
+ - Proporcionalmente, mulheres que tiveram entre 8 e 11 anos de escolaridade são maioria, seguidas das que tiveram 12 ou mais. 
 
-•	Observamos também que para todas as cidades avaliadas, exceto Barueri, a maioria dos bebês tem raça/cor registrada como Branca, seguido pelo pardo.
+ - Observamos também que para todas as cidades avaliadas, exceto Barueri, a maioria dos bebês tem raça/cor registrada como Branca, seguido pelo pardo.
 
-•	A cidade de São Paulo está pelo menos 1 ordem de grandeza acima das demais cidades. Para algumas cidades já é possível ver certa tendência de crescimento ou decrescimento no número.
+ - A cidade de São Paulo está pelo menos 1 ordem de grandeza acima das demais cidades. Para algumas cidades já é possível ver certa tendência de crescimento ou decrescimento no número.
 
-•	A proporção de bebês registrados como brancos diminui, enquanto a de pardos e negros/pretos aumenta. O número de bebês registrados como brancos caiu 20 pontos percentuais no período.
+ - A proporção de bebês registrados como brancos diminui, enquanto a de pardos e negros/pretos aumenta. O número de bebês registrados como brancos caiu 20 pontos percentuais no período.
 
-•	O número de mães solteiras é muito próximo do número de mae que são casas, tendências que vem desde 2012. De 2017 para 2020 o número de mães registradas como estando em união estável pareceu aumentar.
+ - O número de mães solteiras é muito próximo do número de mae que são casas, tendências que vem desde 2012. De 2017 para 2020 o número de mães registradas como estando em união estável pareceu aumentar.
 
-•	O percentual de mães com mais de 12 anos de escolaridade vem aumentando aos poucos durante o período.
+ - O percentual de mães com mais de 12 anos de escolaridade vem aumentando aos poucos durante o período.
 
-•	A proporção de partos que são feitos por cesárea é consistentemente similar à proporção de partos "normais".
+ - A proporção de partos que são feitos por cesárea é consistentemente similar à proporção de partos "normais".
 
-•	O número de nascidos vivos em 2020 chega a ser 10% menor que o mesmo mês no ano anterior. Existe certa dúvida de se esse número seria o esperado para o período, dada a tendência dos anos, ou se esse número possa ser um resultado da pandemia de COVID-19. Esta dúvida é exatamente um dos questionamentos do projeto.
+ - O número de nascidos vivos em 2020 chega a ser 10% menor que o mesmo mês no ano anterior. Existe certa dúvida de se esse número seria o esperado para o período, dada a tendência dos anos, ou se esse número possa ser um resultado da pandemia de COVID-19. Esta dúvida é exatamente um dos questionamentos do projeto.
 
-•	A raça/cor amarela (asiática) é a que mais tem mães acima de 35 anos, enquanto a indígena é a que mais tem mães abaixo de 20 anos.
+ - A raça/cor amarela (asiática) é a que mais tem mães acima de 35 anos, enquanto a indígena é a que mais tem mães abaixo de 20 anos.
 
+### Modelagem do número de nascidos vivos
 
+A estrutura do modelo utilizado foi encontrada empiricamente. Discutimos que realmente seria interessante termos uma recorrência nos meses anteriores ao mês de predição, mas dificilmente este modelo era satisfatoriamente ajustado no treino (as métricas ficavam ruins). Ao se relembrar como a maioria das cidades apresenta certa sazonalidade no número de nascidos vivos, ou seja, a curva de todos os anos apresenta um "formato" parecido, pareceu-se interessante utilizar também componentes da recorrência com valores do mesmo mês, mas para anos anteriores.
 
+Esta modelagem melhorou os resultados, isto é, mais modelos tiverem resultados satisfatórios no treino e alguns começaram a generalizar para o teste. Após isto, verificou-se que certas cidade tem crescimentos ou decrescimentos dos números mensais e anuais de nascidos vivos constante, então se adicionou um parâmetro ao próprio valor do ano. O esperado é que, se, por exemplo, todo ano em média o número de nascidos vivos de uma cidade cair em 100, o parâmetro que multiplica o ano (wT) no modelo seja -100/12, ou algo próximo a isso. Também adicionou-se um parâmetro fixo por mês, que esperava-se que capture-se também o comportamente sazonal do número de nascidos vivos. 
 
-# Paulo Modelos, analises estatística. 
+Com isto houve um número razoável de cidades que estavam sendo bem ajustadas ao treino, e que ainda conseguiam generalizar no teste. Para evitar um viés de escolha (remodelar o problema até termos bons resultados de teste), o ideal seria termos um conjunto de validação, onde validaríamos os nossos modelos, para no final termos o resultado no teste, mas como nosso objetivo de previsão era exatamente os 6 meses de pandemia e como temos 1 amostra por mês, seria impraticável diminuir ainda mais o conjunto de teste para separá-lo em validação (separar um pedaço do treino em validação seria inútil, já que o objetivo do modelo é predizer o número de NV durante a pandemia). Como isso não foi feito, tomou-se o cuidado de se passar por poucas rodadas de melhora do modelo, mas ainda é altamente provável que haja um viés ou estocasticidade de performance do modelo (o modelo funciona bem para uma cidade por "sorte", e não porque representa bem a realidade).
 
-
+Entretanto, considera-se a análise feita completamente válida, já que o modelo utilizado é relativamente simples, o que daria menos chance de ocorrer o overfitting do modelo, mas também não é tão simples (dado o número de amostras), o que também diminui a chance dele ir bem no teste por "sorte". Na seção de Discussão mostraremos como a análise feita se traduz para os valores reais utilizando também um pouco de visualização dos números por mês.
 
 ## Ferramentas
 
@@ -611,9 +601,12 @@ Estamos cintes que o modelo predictor desenvolvido carecem de aprimoramento, por
 7. World Health Organization. Pulse survey on continuity of essential health services during the COVID-19 pandemic: interim report, 27 August 2020. Geneva2020. Available at: https://www.who.int/publications/i/item/WHO-2019-nCoV-EHS_continuity-survey-2020.1.
 8. WHO, UNICEF and UNFPA. Maternal mortality: Levels and trends 2000 to 2017. Geneva 2019. Avalible at: https://www.who.int/reproductivehealth/publications/maternal-mortality-2000-2017/en/.
 9. Schaaf M, Boydell V, Belle SV, Brinkerhoff DW, George A. Accountability for SRHR in the context of the COVID-19 pandemic. Sex Reprod Health Matters 2020;28:1779634
-## Tarefas 
 
-### Realizadas
+
+# Cronograma
+
+## Tarefas Realizadas
+
  - [x] Calcularemos a incidência da COVID-19 no estado e por Município;
  - [x] Estimaremos a taxa de mortalidade e letalidade da COVID-19 no estado e no Município.
 
@@ -653,8 +646,6 @@ Entrega final:
  - [x] Verificação, por cidade, do impacto da pandemia do COVID-19 por cidade avaliada.
 
 
-# Cronograma
-
 ## Previsto
 |                                     Mês | Março |   |   |   | Abril |   |   |   | Maio |   |   |   | Junho |   |   |   | Julho |
 |----------------------------------------:|-------|---|---|---|-------|---|---|---|------|---|---|---|-------|---|---|---|-------|
@@ -670,7 +661,7 @@ Entrega final:
 | Documentação                            |       |   |   | x | x     | x | x | x | x    | x | x | x | x     | x | x | x | x     |
 | Apresentação de resultados              |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   | x | x     |
 
-# Real
+## Real
 |                                     Mês | Março |   |   |   | Abril |   |   |   | Maio |   |   |   | Junho |   |   |   | Julho |
 |----------------------------------------:|-------|---|---|---|-------|---|---|---|------|---|---|---|-------|---|---|---|-------|
 |                                  Semana | 1     | 2 | 3 | 4 | 1     | 2 | 3 | 4 | 1    | 2 | 3 | 4 | 1     | 2 | 3 | 4 | 1     |
