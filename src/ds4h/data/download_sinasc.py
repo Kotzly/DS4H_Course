@@ -27,7 +27,7 @@ def download_dbc(save_path, years=DEFAULT_YEARS, n_jobs=N_JOBS):
         for url in SINASC_URLS
     ]
 
-    print("Downloading data from {} years using {} threads".format(len(SINASC_URLS), N_JOBS), end="")
+    print("Downloading data from {} years using {} threads".format(len(SINASC_URLS), n_jobs), end="")
     start = time()
     with mp.Pool(n_jobs) as pool:
         pool.starmap(download_ftp, args)
