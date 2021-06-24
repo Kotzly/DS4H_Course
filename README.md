@@ -165,8 +165,40 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
 
 ### Integração entre Bases e Análise Exploratória
 
-# Análises Realizadas - Silvia - Dados faltantes, Estatística, dos gráficos. Paulo Modelos, analises estatística. 
-> Descrição detalhada das análises realizadas.
+## Análises Realizadas 
+
+# Qualidade dos dados e Dados faltantes
+
+Durante o processo de Análise Exploratória dos dados, utilizamos como premissa se os dados eram confiáveis e se a base estava limpa. 
+Inicialmente já foi possível observar que para cada coluna existiam valores que não eram esperados, ou que eram equivalentes a valores faltantes. Por exemplo, para a coluna ESCMAE o valor 9 representa um valor ignorado, que não foi preenchido. Para a coluna IDADEMAE, o valor de 99 parece ser um erro, já que antes dele o maior valor de idade foi 65. Para a coluna QTDFILVIVO (quantidade de filhos vivos), apesar do número 30 também parecer absurdo, o número 99 também parece ser um erro.
+Estes valores foram substituídos por NULL, bem como certo valores estranhos, como o valor de 99 na colunas IDADEMAE (idade da mãe). Para as colunas categóricas, as categorias foram codificadas de 1 até N, sendo N o número de categorias. Desta maneira Valores maiores que N foram transformados em NULL, para que depois pudessem ser descartados durante as análises.
+
+	QTDFILVIVO: valores maiores que 30.
+	QTDFILMORT: valores maiores que 30.
+	IDADEMAE: valores maiores que 65.
+	ESTCIVMAE: valores maiores que 5.
+	PARTO: valores maiores que 2.
+	IDANOMAL: valores maiores que 2.
+	GESTACAO: valores maiores que 6.
+	RACACOR: valores maiores que 5.
+	RACACORMAE: valores maiores que 5.
+	ESCMAE: valores maiores que 5.
+
+Após essas alterações realizamos o cálculo de porcentagem de dados faltantes para cada variável, o maior valor observado estava na variável RACACORMAE que tinha 39% dos dados faltantes, as demais variáveis estavam entre 3 e 0%. Inicialmente optamos por utilizar o método complete-case analysis, que indica dropar os dados faltantes da base. Porém quando começamos a realizar a análise da qualidade dos dados, de afim validar possíveis discrepâncias e inconsistências, percebemos variáveis com valores 9 e 99, que segundo a descrição do dicionário de dados são valores ignorados, por isso substituímos estes valores por nulos.
+Para que as demais varáveis não fossem comprometidas, decidimos manter os registros com valores nulos no dataset uma vez que a maioria dos métodos estatísticos em python já desconsideram estes valores.
+
+Outro tratamento realizado nos dados, foi em relação a data. Os valores plotados estavam sem separação, por exemplo a data 24/05/2020 estava com o valor 24052020 no dataset, ou ainda a data 08/02/2020 estava plotada como 8022020. Para resolver esse caso criamos uma função em Python que transforma os valores para a formatação correta. As funções str_to_datetime, nullify criadas no módulo sinasc.py trata deste caso.
+
+Em resumo, observamos um dataset bastante consistente em dados, e com porcentagens muito baixas de erro.
+
+
+# Estatística e Graficos
+
+
+
+# Paulo Modelos, analises estatística. 
+
+
 
 ## Ferramentas
 
