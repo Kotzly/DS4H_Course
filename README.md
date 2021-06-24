@@ -30,7 +30,7 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 
 ### Vídeo da Apresentação Final
 
-Assista o [**vídeo d Apresentação Final do projeto**](https://drive.google.com/file/d/1zpTE-o8FtsIkw8usp5e2mev-2MuZLujn/view?usp=sharing).
+Assista o [**vídeo de Apresentação Final do projeto**](https://drive.google.com/file/d/1zpTE-o8FtsIkw8usp5e2mev-2MuZLujn/view?usp=sharing).
 
 ## Slides do Projeto
 
@@ -129,7 +129,7 @@ Em ambos os casos, o conjunto de teste será o segundo semestre de 2020. Utiliza
 
 Será criado um modelo para cada cidade, pois foi visto na análise exploratória que cada cidade tem comportamentos diferentes de tendência entre os anos e de sazonalidade entre os meses. A análise de resultados será feita utilizando-se a hipótese de que se houve um bom ajuste de parâmetros no treino, este modelo representa bem os dados de treinos, e caso o modelo performe mal no teste, há a possibilidade de que os dados de teste realmente estão diferentes dos dados de treino, portanto houve certa diferença no número de nascidos vivos do teste.
 
-Nas discussões sobre os resultados, nos referimos à um resultado como sendo "bom" quando ele apresenta mais que 50% de R² e menos de 20% de MAPE. Para o modelo ser considerado "bom" no teste utilizamos o valor de 10%, mas apenas para o MAPE. Esses valores foram escolhidos pois o R2 penaliza muito quando, apesar do resultado absoluto não estar muito diferente, o comportamento da curva está diferente, o que até faz sentido para verificar o ajuste do modelo, entretanto para o teste o que faz mais sentido é o valor absoluto do erro, neste caso o valor percentual. Primariamente se analisou os resultados no Fold 1, já que é o fold com mais dados de treinamento, mas também se tirou conclusões sobre o Fold 0.
+Nas discussões sobre os resultados, nos referimos à um resultado como sendo "bom" quando ele apresenta mais que 50% de R² e menos de 20% de MAPE. Para o modelo ser considerado "bom" no teste utilizamos a regra do MAPE ter que estar abaixo de 10%, apenas. Esses valores foram escolhidos pois o R2 penaliza muito quando, apesar do resultado absoluto não estar muito diferente, o comportamento da curva está diferente, o que até faz sentido para verificar o ajuste do modelo, entretanto para o teste o que faz mais sentido é o valor absoluto do erro, neste caso o valor percentual. Primariamente se analisou os resultados no Fold 1, já que é o fold com mais dados de treinamento, mas também se tirou conclusões sobre o Fold 0.
 
 Será criado um modelo, com a mesma estrutura apresentada, para cada cidade. Também serão realizados experimentos onde se selecionará apenas o número de nascidos vivos para certa parcela da população:
  - Divisão étnica/racial:
@@ -212,7 +212,7 @@ Estes valores foram substituídos por NULL, bem como certo valores estranhos, co
  - RACACORMAE: valores maiores que 5.
  - ESCMAE: valores maiores que 5.
 
-Após essas alterações realizamos o cálculo de porcentagem de dados faltantes para cada variável, o maior valor observado estava na variável RACACORMAE que tinha 39% dos dados faltantes, as demais variáveis estavam entre 3 e 0%. Inicialmente optamos por utilizar o método complete-case analysis, que indica dropar os dados faltantes da base. Porém quando começamos a realizar a análise da qualidade dos dados, de afim validar possíveis discrepâncias e inconsistências, percebemos variáveis com valores 9 e 99, que segundo a descrição do dicionário de dados são valores ignorados, por isso substituímos estes valores por nulos.
+Após essas alterações realizamos o cálculo de porcentagem de dados faltantes para cada variável, o maior valor observado estava na variável RACACORMAE que tinha 39% dos dados faltantes, as demais variáveis estavam entre 6 e 0%. Inicialmente optamos por utilizar o método complete-case analysis, que indica dropar os dados faltantes da base. Porém quando começamos a realizar a análise da qualidade dos dados, de afim validar possíveis discrepâncias e inconsistências, percebemos variáveis com valores 9 e 99, que segundo a descrição do dicionário de dados são valores ignorados, por isso substituímos estes valores por nulos.
 Para que as demais varáveis não fossem comprometidas, decidimos manter os registros com valores nulos no dataset uma vez que a maioria dos métodos estatísticos em python já desconsideram estes valores.
 
 Outro tratamento realizado nos dados, foi em relação a data. Os valores plotados estavam sem separação, por exemplo a data 24/05/2020 estava com o valor 24052020 no dataset, ou ainda a data 08/02/2020 estava plotada como 8022020. Para resolver esse caso criamos uma função em Python que transforma os valores para a formatação correta. As funções str_to_datetime, nullify criadas no módulo sinasc.py trata deste caso.
