@@ -14,86 +14,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 | Débora Rocha Helfstein  | 234934  | Farmacêutica|
 | Paulo Augusto Alves Luz Viana | 263889 | Elétrica |
 
-Você pode rodar o notebook com todas as análises atráves deste [Jupyter notebook no Google Colab!](https://colab.research.google.com/github/Kotzly/DS4H_Course/blob/v1.1/notebooks/DS4H_full.ipynb).
-
-## Descrição Resumida do Projeto
-Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial. Atualmente (12/04/2021), ao nível global foram notificados cerca de 136,181,468, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 2,938,804 caso notificados. A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde. De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal que podem influenciar negativamente nos seus indicadores, como é o caso do número de nascidos vivos. Objetivo: o presente estudo tem o objetivo de avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo. Metodologia: será realizado uma análise de serie temporal, baseada em dados Sistema de Informações de Nascidos Vivos (SINASC/DATASUS) e do Banco de Dados de Síndrome Respiratória Aguda Grave (SRAG 2021), com o auxílio de métodos estatísticos  e de ferramentas inteligência artificial (métodos de aprendizado de maquinas) - SPSS Modeler 18.1, Google Colab e  Jupyter Notebook - realizaremos a modelagem, análise da curva de nascimentos vivos nos últimos 10 anos prévios a pandemia e a predição do número de nascidos vivos esperados para o ano 2020.  Resultados esperados: através desta pesquisa esperamos obter os padrões das curvas de nascidos vivos e estabelecer uma correlação entre a pandemia e o indicador de saúde materna e perinatal para os diferentes municípios do estado de São Paulo.
-
-Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
-
-## Estrutura de arquivos e pastas
-
-```text
-DS4H_Course
-├───assets                              <- Arquivos relacionados ao projeto.
-│   └───excel                           <- Arquivos excel gerados durante o desenvolvimento.
-├───data                                <- Dados utilizados no projeto.
-│   ├───external
-│   └───processed
-│       └───indexes
-├───documents                           <- Documentos relacionados ao projeto e aos dados.
-├───notebooks                           <- Notebooks jupyter utilizados no projeto.
-└───src                                 <- Código fonte do projeto.
-    ├───ds4h                            <- Pacote python instalável.
-    │   ├───data
-    │   ├───orange
-    │   ├───processing
-    │   ├───scripts
-    │   └───visualization
-    └───orange                          <- Arquivos do Orange usados para visualização.
-```
-# Instalação
-
-O projeto está sendo desenvolvido majoritariamente em Python 3.6, mas também foram utilizadas outras ferramentas como R, Orange, e Prism. É possível instalar o pacote do projeto (`ds4h`) seguindo os seguintes passos:
- - Instale o [Anaconda](https://www.anaconda.com/products/individual). Ele será usada para o gerenciamento do ambiente python.
- - Para rodar os scripts do Orange, instale-o na tela inicial do Anaconda. Para fazer isso, abra o Anaconda Navigator no seu computador, e clique em `install` no ícono do Orange.
- - Na linha de comando ou no Anaconda shell, crie o ambiente com:
-
-```
-conda env create -n ds4h python=3.6
-conda activate ds4h
-```
-
- - Na pasta raiz do projeto, instale o pacote com:
-
-```
-pip install ./src
-```
-
- - Caso você vá rodar o notebook principal do projeto, instale a linguagem R em sua máquina. A maneira mais fácil de fazer isso é instalando o [RStudio](https://www.rstudio.com/products/rstudio/download/#download), mas não problema em instalar apenas o R.
-
-## Como usar
-
-É possível executar todas os passos de download, pré-processamento, processamento e análise de dados (feitos até a segunda entrega) [neste notebook](https://colab.research.google.com/github/Kotzly/DS4H_Course/blob/v1.1/notebooks/DS4H_full.ipynb) no Google Colab. Considera-se a entrega principal como sendo este notebook, que contém os racional das análises, além do código Python.
-
-Para executar o notebook em sua própria máquina, primeiro siga todos os passos descritos em **Instalação**. Após isto, abra a linha de comando ou o Anaconda shell na pasta raiz do projeto e rode:
-
-```
-conda activate ds4h
-jupyter notebook
-```
-
-Vá até a pasta `notebooks` e abra o notebook **DS4H_full.ipynb**.
-
-
-
-# Projeto `Impacto da pandemia da COVID-19 nos indicadores da saúde materna e perinatal nas mulheres em idade fértil do Estado de São Paulo.`
-
-## Project `Impact of the COVID-19 pandemic on maternal and perinatal health indicators in women of childbearing age in the state of São Paulo.`
-
-# Apresentação
-
-O presente projeto foi originado no contexto das atividades da disciplina de pós-graduação [*Ciência e Visualização de Dados em Saúde*](https://github.com/datasci4health/home), oferecida no primeiro semestre de 2021, na Unicamp.
-
-
-|Nome  | RA | Especialização|
-|--|--|--|
-|Charles M'poca Charles | 163383 | Saúde|
-| Silvia Arantes Pereira Olivio | 224932  | Computação|
-| Débora Rocha Helfstein  | 234934  | Farmacêutica|
-| Paulo Augusto Alves Luz Viana | 263889 | Elétrica |
-
-Você pode rodar o notebook com todas as análises atráves deste [Jupyter notebook no Google Colab!](https://colab.research.google.com/github/Kotzly/DS4H_Course/blob/v1.0/notebooks/DS4H_full.ipynb).
+Você pode rodar o notebook com todas as análises atráves deste [Jupyter notebook no Google Colab!](https://colab.research.google.com/github/Kotzly/DS4H_Course/blob/v2.0/notebooks/DS4H_full.ipynb).
 
 ## Descrição Resumida do Projeto
 Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial. Atualmente (12/04/2021), ao nível global foram notificados cerca de 136,181,468, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 2,938,804 caso notificados. A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde. De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupção ou redução de provisão dos serviços de saúde materna e perinatal que podem influenciar negativamente nos seus indicadores, como é o caso do número de nascidos vivos. Objetivo: o presente estudo tem o objetivo de avaliar o impacto da pandemia da COVID-19 no número de nascidos vivos nos municípios do estado de São Paulo. Metodologia: será realizado uma análise de serie temporal, baseada em dados Sistema de Informações de Nascidos Vivos (SINASC/DATASUS) e do Banco de Dados de Síndrome Respiratória Aguda Grave (SRAG 2021), com o auxílio de métodos estatísticos  e de ferramentas inteligência artificial (métodos de aprendizado de maquinas) - Google Colab e  Jupyter Notebook - realizaremos a modelagem, análise da curva de nascimentos vivos nos últimos 10 anos prévios a pandemia e a predição do número de nascidos vivos esperados para o ano 2020.  Resultados esperados: através desta pesquisa esperamos obter os padrões das curvas de nascidos vivos e estabelecer uma correlação entre a pandemia e o indicador de saúde materna e perinatal para os diferentes municípios do estado de São Paulo.
@@ -101,18 +22,47 @@ Introdução: A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado p
 ## Abstract
 Introduction: The COVID-19 pandemic caused by the SARS_COV_2 virus has reached alarming proportions worldwide. As of 21rst June 2021, 178,553,726 COVID-19 cases have been reported worldwide, Brazil being one of the most affected countries, with approximately 17,927,928 reported cases. The pandemic has affected the non-general population regardless of sex, race, and social strata, with a great impact on the health system. Among the effects of the pandemic on the health system, a significant disruption (interruption or reduction) in the provision of maternal and perinatal health services stand out.  The disruption of the sexual and reproductive health might have a significant negative impact on maternal and neonatal outcomes, such as the number of live births, preterm birth, and stillbirth and so on. Objective: This study aims was to assess the impact of the COVID-19 pandemic on the number of live births in the cities of the state of Sao Paulo. Methodology: a data-driven time series analysis (ecological study) was carried out, based on data from the Live Birth Information System (SINASC / DATASUS) and the Severe Acute Respiratory Syndrome Database (SRAG 2021). Using an artificial tools ( machine learning methods) - Google Colab and Jupyter Notebook - We conducted a statistical analysis based on  modelling, analysis of the curve of live births in the last 10 years prior to the pandemic and the prediction of the number of live births expected for the year 2020. Expected results: Through this research, we hope to obtain the patterns of the live birth curves and establish a correlation between the pandemic and the maternal and perinatal health indicator for the different municipalities of Sao Paulo state.
 
-# Videos do Projeto  - Débora
+# Videos do Projeto
 
 ## Vídeo da Proposta
-Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto.
 
-## Vídeo da Apresentação Final  - Falta
+Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4hEIceaY8FeVvwFCI/view?usp=sharing) de apresentação do projeto. 
 
+## Vídeo da Apresentação Final
+
+Assista o [**vídeo final de apresentação do projeto**](https://drive.google.com/file/d/1zpTE-o8FtsIkw8usp5e2mev-2MuZLujn/view?usp=sharing).
 
 # Slides do Projeto
 
-## Slides da Proposta - https://github.com/Kotzly/DS4H_Course/blob/main/Slides%20do%20Projeto
-## Slides da Apresentação Final - apresentação entrega final (1).pptx
+
+- [Slides da Proposta](./assets/powerpoint/ApresentaçãoGrupo.pptx)
+
+- [**Apresentação para Entrega Final**](./assets/powerpoint/ApresentaçãoFinal.pptx)
+
+
+# Estrutura de arquivos e pastas
+
+```
+├───assets                               <- Arquivos relacionados ao projeto.
+├───data                                 <- Dados utilizados no projeto.
+│   ├───external
+│   └───processed
+├───documents                            <- Documentos relacionados ao projeto e aos dados.
+├───media                                <- Arquivos de mídia
+│   ├───images
+│   └───powerpoint
+├───notebooks                            <- Notebooks jupyter utilizados no projeto.
+└───src                                  <- Código fonte do projeto.
+    ├───ds4h                             <- Pacote python instalável.                         
+    │   ├───analysis
+    │   ├───data
+    │   ├───modelling
+    │   ├───processing
+    │   ├───scripts
+    │   └───visualization
+    └───orange
+   
+```
 
 # Introdução e Referenciais de Teóricos 
 A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial (1). Atualmente (21/06/2021), ao nível global foram notificados cerca de 178.553.726, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 17,927,928 caso notificados (2). A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde.
@@ -123,10 +73,7 @@ De entre os efeitos da pandemia no sistema de saúde, destacam-se a interrupçã
 A redução ou interrupção destes serviços essenciais violam os princípios fundamentais dos direitos humanos. Adicionalmente, colocam em perigo a saúde materna e perinatal com aumento considerável da incidência de gravidez não planejada, abortos inseguros, óbitos fetais morbidade e mortalidade materna, comprometendo deste modo os ganhos alcançados nas últimas duas décadas na área de saúde e os objetivos de desenvolvimento sustentável, agenda 2030 (8,9). 
 Deste modo, o número de nascidos vivos pode ser um indicador chave para mensuração dos impactos da pandemia na saúde materna e perinatal. 
 
->
-> Indicação (bastante resumida) da análise proposta
->
-> Indicação (bastante resumida) dos resultados alcançados
+
 
 ## Perguntas de Pesquisa
  - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
@@ -162,7 +109,7 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
 
 ## Modelagem
 Para a modelagem, utilizou-se um modelo linear baseado em recorrências. Uma amostra é o número de nascidos vivos em um mês de um determinado ano. O modelo é:
-    ![model image](./media/model.jpg)
+    ![model image](./media/assets/images/model.jpg)
 
     \hat{Y}_{year, month} = \sum _{i=1}^{N_{years}}  \left ( w^Y_i * Y_{year-i, month} \right ) + \sum _{i=1}^{N_{months}}  \left (  w^M_i * Y_{year, month-i} \right ) + \left ( w^T*(year - 2000) \right ) + \theta_{month} + \theta 
 
@@ -410,8 +357,8 @@ No resultado apenas para as mães auto-declaradas brancas, foi identificado que 
 
 As figuras abaixo mostram o gráfico de nascidos vivos para os últimos cinco anos, a fim de mostrar como são as características desses dados que fizeram que a análise feita chegasse na conclusão que se chegou. Por exemplo, temos a cidade de Santa Isabel, para a qual foi apontada mudança do número de nascidos vivos, e Dracena, para a qual foi apontado que não houve mudança.
 
-![Santa Isabel](./media/santaisabelwhite.png)
-![Dracena](./media/dracenawhite.png)
+![Santa Isabel](./media/assets/images/santaisabelwhite.png)
+![Dracena](./media/assets/images/dracenawhite.png)
 
 
 ### RACACOR != White
@@ -455,8 +402,8 @@ Para esta população, indicou-se mudança no número de nascidos vivos para as 
 
 A seguir se tem os plots do número de nascidos vivos de Barueri e de São Paulo, para a população de mulheres com 7 ou menos anos de estudos.
 
-![Barueri](./media/barueriest7.png)
-![São Paulo](./media/saopauloest7.png)
+![Barueri](./media/assets/images/barueriest7.png)
+![São Paulo](./media/assets/images/saopauloest7.png)
 
 ### ESCMAE >= 8 anos
 
@@ -499,8 +446,8 @@ Para o caso de mães casadas ou em união estável, apenas detectou-se mudança 
 
 A seguir se tem os plots do número de nascidos vivos de Santos e São José do Rio Preto, para a estratificação apresentada.
 
-![Santos](./media/santoscasada.png)
-![São José do Rio Preto](./media/saojosecasada.png)
+![Santos](./media/assets/images/santoscasada.png)
+![São José do Rio Preto](./media/assets/images/saojosecasada.png)
 
 
 ### ESTCIVMAE = Solteira
@@ -585,10 +532,10 @@ Para o AGEGROUP A3 as cidades de Andradina, Dracena, Guaíra, Jales, Santa Isabe
 
 Cidades como Guaíra, Dracena e Jales tiveram maus ajustes de parâmetros de treino para a maioria das estratificações, o que não nos permite tirar muitas conclusões sobre o comportamento do número de nascidos vivos destas cidades. O que se pode afirmar é o modelo escolhido provavelmente não é adequado para estas cidades, ou porque ele não captura a dinâmica do número de NV delas ou porque este número é demasiadamente ruidoso ou aleatório. Para verificarmos isso, podemos observar os gráficos dos números de nascidos vivos durante os anos de 2006 à 2020 para Santos e São Paulo (cidades com bons ajustes), e Dracena e Guaíra (cidade com ajustes majoritariamente ruins):
 
-![Sâo Paulo](./media/saopaulo.png)
-![Santos](./media/santos.png)
-![Dracena](./media/dracena.png)
-![Guaíra](./media/guaira.png)
+![Sâo Paulo](./media/assets/images/saopaulo.png)
+![Santos](./media/assets/images/santos.png)
+![Dracena](./media/assets/images/dracena.png)
+![Guaíra](./media/assets/images/guaira.png)
 
  
 Claramente se vê que São Paulo e Santos seguem um padrão e há uma sazonalidade relativamente comportada entre os meses. Por exemplo, quase todos os anos, em Santos, o número de nascidos vivos cai a partir no mês de junho até novembro, e sobe novamente em dezembro. Dito isso, pode-se ver também que é mais difícil detectar certo padrão nos números de Guaíra e Dracena, e isto muito provavelmente se dá pela ordem de grandeza do número de nascidos vivos destas duas cidades, tendo no máximo pouco mais de 80 nascidos vivos no mês. Esse pouco número de NV o torna altamente sujeito a aleatoriedades e eventos esporádicos, tornando o modelo incapaz de se ajustar bem aos dados devido à alta incerteza. Esta incerteza pode se tornar ainda maior ao se estratificar o *dataset*, já que o número de NV em uma amostra será ainda menor.
@@ -596,14 +543,14 @@ Claramente se vê que São Paulo e Santos seguem um padrão e há uma sazonalida
 
 Para visualizarmos graficamente o que a análise feita pode indicar, vamos usar as cidades de São Paulo e São Caetano do Sul como exemplo, e os anos de 2015 à 2020.
 
-![São Paulo a partir de 2015](./media/spfull.png)
-![São Caetano do Sul a partir de 2015](./media/saocaetanofull.png)
+![São Paulo a partir de 2015](./media/assets/images/spfull.png)
+![São Caetano do Sul a partir de 2015](./media/assets/images/saocaetanofull.png)
 
 Segundo à análise feita, o número de NV para São Paulo em 2020 foi o esperado pelo modelo. Pelo gráfico realmente os valores reais de 2020 parecem como esperado, há um decréscimo do número de todos os meses, como já bem acontecendo há alguns anos e o "formato" da curva do ano como um todo parece similar aos anos anteriores. Na mesma análise, São Caetano do Sul deu indícios de mudança de comportamento em 2020. Esse acontecimento é claramente visto no gráfico do número de NV da cidade: há um crescimento anormal no segundo semestre de 2020, principalmente no mês 10, que pode (ou não) ser consequência da pandemia. Isso é completamente discutível, já que o lockdown se deu na maioria das cidades brasileiras a partir de março, que fica exatamente 7 meses antes do mês 10.
 
 Outro exemplo é para a cidade de Santos, para AGEGROUP igual à A1 (mulheres com menos de 20 anos). Na análise concluimos que houve um diferença para esta cidade, no segundo semestre de 2020. O gráfico abaixo mostra o número por mês, a partir de 2015:
  
-![Santos a partir de 2015, AGEGROUP A1](./media/santosa1.png)
+![Santos a partir de 2015, AGEGROUP A1](./media/assets/images/santosa1.png)
 
 Não se vê claramente uma diferença, apesar da análise a ter apontado. Isto poderia pedir por análise mais detalhadas, por mais visualizações ou pela pesquisa de diferentes modelos.
 
@@ -636,7 +583,7 @@ Devido a dificuldade que encontramos para escolher um teste que se adequasse cor
 
 Finalmente, a tabela a seguir mostra a conclusão de cada uma das análises. O símbolo de zero cortado indica que a análise foi inconclusiva, o sinal verde indica que houve mudança e o sinal vermelho indica que não houve mudança no número de nascidos vivos. Pode-se ver, por exemplo, que São Paulo não teve mudança em nenhuma das estratificações avaliadas, que Guaíra não teve resultado conclusivo em nenhuma das estratificações (provavelmente porque tem muitos poucos habitantes), e que há algumas cidades para as quais se detectou mudanças para algumas das estratificações e para outras não.
 
-![Resumo](./media/resumo.jpg)
+![Resumo](./media/assets/images/resumo.jpg)
 
 
 # Conclusão
