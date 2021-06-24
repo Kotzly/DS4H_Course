@@ -1,6 +1,6 @@
-# Projeto `Impacto da pandemia da COVID-19 nos indicadores da saúde materna e perinatal nas mulheres em idade fértil do Estado de São Paulo.`
+# Projeto `Impacto da pandemia da COVID-19 no número de nascidos vivos do Estado de São Paulo.`
 
-## Project `Impact of the COVID-19 pandemic on maternal and perinatal health indicators in women of childbearing age in the state of São Paulo.`
+## Project `Impact of the COVID-19 pandemic on the number of live births in the State of São Paulo`
 
 # Apresentação
 
@@ -163,7 +163,7 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
 Para a modelagem, utilizou-se um modelo linear baseado em recorrências. Uma amostra é o número de nascidos vivos em um mês de um determinado ano. O modelo é:
     ![model image](./media/model.jpg)
 
-    \hat{Y}_{year, month} = \sum _{i=1}^{N_{years}}  w^Y_i * Y_{year-i, month} + \sum _{i=1}^{N_{months}}  w^M_i * Y_{year, month-i} + w^T*(year - 2000) + \theta_{month} + \theta 
+    \hat{Y}_{year, month} = \sum _{i=1}^{N_{years}}  \left ( w^Y_i * Y_{year-i, month} \right ) + \sum _{i=1}^{N_{months}}  \left (  w^M_i * Y_{year, month-i} \right ) + \left ( w^T*(year - 2000) \right ) + \theta_{month} + \theta 
 
 Onde w^Y_i e w^M_i são os parametros da recorrência dos anos anterioes e dos meses anterioes, respectivamente, w^Y é o parâmetro de tendência, \theta_{month} é um parâmetro relativo ao mês *month*, e \theta é o *intercept* do modelo.
 
@@ -534,14 +534,30 @@ Uma coisa interessante a se nota é para quase todos os casos de estratificaçã
  - Que o modelo não teve capacidade de generalizar o conhecimento dos nos anos de zika vírus;
  - ou que a distribuição dos dados nos anos de zika vírus é diferente do que do segundo semestre de 2020;
 
-# Conclusão - Falta
+Finalmente, a tabela a seguir mostra a conclusão de cada uma das análises. O símbolo de zero cortado indica que a análise foi inconclusiva, o sinal verde indica que houve mudança e o sinal vermelho indica que não houve mudança no número de nascidos vivos. Pode-se ver, por exemplo, que São Paulo não teve mudança em nenhuma das estratificações avaliadas, que Guaíra não teve resultado conclusivo em nenhuma das estratificações (provavelmente porque tem muitos poucos habitantes), e que há algumas cidades para as quais se detectou mudanças para algumas das estratificações e para outras não.
+
+![Resumo](./media/resumo.jpg)
+
+
+# Conclusão
 
 Há diversas conclusões, reflexões e discussões que pode-se ter baseando-se nos resultados obtidos. Primeiramente, as cidade de São Paulo e Santos, quase que em todas análises, tiveram bons ajustes e boas métricas no teste, mesmo para as estratificações do dataset. Isto pode indicar que realmente o número de nascidos vivos não se alterou durante o semestre de 2020 para estas cidades.
 
+Cidades como Guaíra, Dracena, Jales e Santa Isabel foram prejudicadas por terem poucos resultados conclusivos. Isso indica que para estas cidades o modelo utilizado não representa a dinâmica do número de nascidos vivos destas cidades, e talvez deveria-se buscar novas features, mudar a estrutura do modelo ou até se realizar outro tipo de análise.
+
+A estratificação que apresentou mais mudanças foi a de mães com 7 ou menos anos de estudos, e também mães com menos de 20 anos de idade, para as cidades de Araçatuba, Barueri, Santos e São José do Rio Preto. Este resultado, entretanto, não indica que a causa desta diferença deu-se por causa da pandemia ou do COVID-19, mas que no período houve a diferença. Outra coisa interessante é que para São Caetano do sul detectou-se diferença para todas as estratificações nas quais o resultado foi conclusivo, e como se viu pelo gráfico, é visível a disparidade do segundo semestre de 2020 com os anos anteriores. Barueri também é uma cidade que teve diferença detectada para cinco estratificações, então também é uma cidade de interesse.
+
+Conclui-se que a análise feita realmente teve sua utilidade para detectar anomalias no número de nascidos vivos, e realmente foram detectadas essas mudanças ou não mudanças para parte das cidades e para certas estratificações. Percebeu-se como a metodologia utilizada pode ser uma saída para a pouca quantidade de dados, o que nos prejudicou na hora de realizar as análises estatísticas. Entretanto não se deve confiar cegamente nos resultados do modelo, já que ele não utiliza todos os dados que poderiam ser considerados importantes para o problema proposto mas que não tinhamos acesso, e como qualquer modelo ele pode possuir vieses devido aos anos escolhidos para treinamento ou devido a sua própria estrutura.
 
 # Trabalhos Futuros - Charles
 
-# Referências Bibliográficas - Charles, Silvia, Débora, Paulo
+# Referências Bibliográficas
+
+ - Website do Ministério da Saúde. Disponível em: <https://datasus.saude.gov.br/>. Acesso em: 24 de jul. de 2021.
+ - Banco de Dados de Síndrome Respiratória Aguda Grave. Disponível em: <https://opendatasus.saude.gov.br/dataset/bd-srag-2021>. Acesso em: 24 de jul. de 2021.
+ -  SP Contra o Novo Coronavírus (Seade/coronavírus). Disponível em: <https://www.saopaulo.sp.gov.br/coronavirus/>. Acesso em: 24 de jul. de 2021.
+ - Biblioteca Virtual – São Paulo: população do municípios paulistas. Disponível em: <http://www.bibliotecavirtual.sp.gov.br/temas/sao-paulo/sao-paulo-populacao-dos-municipios-paulistas.php>. Acesso em: 24 de jul. de 2021.
+ - Dados sugerem queda de nascimentos no Brasil no 2º semestre de 2016; zika pode ter tido impacto. Disponível em : <https://g1.globo.com/bemestar/zika-virus/noticia/dados-sugerem-queda-de-nascimentos-no-brasil-no-2-semestre-de-2016-zika-pode-ter-tido-impacto.ghtml>. Acesso em: 24 de jul. de 2021.
 
 ## Tarefas 
 
@@ -609,11 +625,11 @@ Entrega final:
 | Definir o escopo da Pesquisa            |       |   |   | x | x     | x | x |   |      |   |   |   |       |   |   |   |       |
 | Seleção de dados                        |       |   |   |   |       |   |   | x | x    |   |   |   |       |   |   |   |       |
 | Pré-processamento dos dados             |       |   |   |   |       |   |   |   | x    | x | x |   |       |   |   |   |       |
-| Processamento e transformação dos dados |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
+| Processamento e transformação dos dados |       |   |   |   |       |   |   |   | x    | x | x |   |       |   |   |   |       |
 | Data Mining                             |       |   |   |   |       |   |   |   |      |   | x |   |       | x | x |   |       |
 | Criação de modelos                      |       |   |   |   |       |   |   |   |      |   |   |   |       | x | x |   |       |
-| Análise estatística                     |       |   |   |   |       |   |   |   |      |   | x |   |       |   | x |   |       |
-| Avaliação dos modelos                   |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   |   |       |
+| Análise estatística                     |       |   |   |   |       |   |   |   |      |   | x |   |       | x | x |   |       |
+| Avaliação dos modelos                   |       |   |   |   |       |   |   |   |      |   |   |   |       | x | x |   |       |
 | Documentação                            |       |   |   | x | x     | x | x | x | x    | x | x |   |   x   | x | x | x |       |
 | Apresentação de resultados              |       |   |   |   |       |   |   |   |      |   |   |   |       |   |   | x |   x   |
 
