@@ -130,7 +130,7 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 
 ## Perguntas de Pesquisa
  - Qual foi o impacto da pandemia da COVID-19 na taxa de nascidos vivos no Estado de São Paulo?
- - É possível prever a taxa de nascidos vivos dos anos seguintes com os dados anteriores?
+ - É possível prever a taxa de nascidos vivos nos meses de pandemia utilizando os dados dos anos anteriores?
 
 # Objetivos do Projeto - Charles
 > Como seu projeto propôs abordar o problema apresentado.

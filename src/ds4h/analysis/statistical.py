@@ -84,8 +84,8 @@ def statistical_report(df):
             X = dfA1['DTNASC'].values
             shap_stat, spvalue = shapiro(X)
             k_stat, kpvalue = kstest((X - X.mean())/X.std(), "norm", N=len(X))
-            print("\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
-            print("\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
+            print("\t\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
+            print("\t\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
 
             print ("\t\tOne-way ANOVA P =", p_val)
         print()
@@ -120,8 +120,8 @@ def statistical_report(df):
         X = dfSingle['DTNASC'].values
         shap_stat, spvalue = shapiro(X)
         k_stat, kpvalue = kstest((X - X.mean())/X.std(), "norm", N=len(X))
-        print("\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
-        print("\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
+        print("\t\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
+        print("\t\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
 
         print ("\t\tOne-way ANOVA P =", p_val)
     print()
@@ -139,10 +139,10 @@ def statistical_report(df):
         X = df12['DTNASC'].values
         shap_stat, spvalue = shapiro(X)
         k_stat, kpvalue = kstest((X - X.mean())/X.std(), "norm", N=len(X))
-        print("\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
-        print("\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
+        print("\t\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
+        print("\t\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
 
-        print ("One-way ANOVA P =", p_val)
+        print ("\t\tOne-way ANOVA P =", p_val)
     print()
 
     print("Mulheres com 8 ou mais anos de estudos")
@@ -157,8 +157,8 @@ def statistical_report(df):
         X = df8['DTNASC'].values
         shap_stat, spvalue = shapiro(X)
         k_stat, kpvalue = kstest((X - X.mean())/X.std(), "norm", N=len(X))
-        print("\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
-        print("\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
+        print("\t\tShapiro-Wilk statistic: {:.4f} (p={:.4f})".format(shap_stat, spvalue)) 
+        print("\t\tKolmogorov-Smirnov test statistic: {:.4f} (p={:.4f})".format(k_stat, kpvalue)) 
 
-        print("\tOne-way ANOVA P =", p_val)
+        print("\t\tOne-way ANOVA P =", p_val)
     print()
