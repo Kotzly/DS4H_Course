@@ -86,10 +86,10 @@ Por favor, assista ao [vídeo](https://drive.google.com/file/d/1xz9lfkAAQFm5fQf4
 ## Vídeo da Apresentação Final  - Falta
 
 
-# Slides do Projeto - Falta Débora
+# Slides do Projeto
 
 ## Slides da Proposta - https://github.com/Kotzly/DS4H_Course/blob/main/Slides%20do%20Projeto
-## Slides da Apresentação Final - Falta
+## Slides da Apresentação Final - apresentação entrega final (1).pptx
 
 # Introdução e Referenciais de Teóricos 
 A pandemia da COVID-19 causada pelo vírus SARS_COV_2 tem tomado proporções alarmantes ao nível mundial (1). Atualmente (21/06/2021), ao nível global foram notificados cerca de 178.553.726, sendo o Brasil um dos países mais afetado pela pandemia, com aproximadamente 17,927,928 caso notificados (2). A pandemia tem afetado a população no geral sem distinção do sexo, raça, e estrato social com grande impacto no sistema de saúde.
