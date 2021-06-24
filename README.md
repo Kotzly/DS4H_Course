@@ -167,7 +167,7 @@ Portanto o teste escolhido foi One-way ANOVA que será executado levando em cons
 
 ## Análises Realizadas 
 
-# Qualidade dos dados e Dados faltantes
+### Qualidade dos dados e Dados faltantes
 
 Durante o processo de Análise Exploratória dos dados, utilizamos como premissa se os dados eram confiáveis e se a base estava limpa. 
 Inicialmente já foi possível observar que para cada coluna existiam valores que não eram esperados, ou que eram equivalentes a valores faltantes. Por exemplo, para a coluna ESCMAE o valor 9 representa um valor ignorado, que não foi preenchido. Para a coluna IDADEMAE, o valor de 99 parece ser um erro, já que antes dele o maior valor de idade foi 65. Para a coluna QTDFILVIVO (quantidade de filhos vivos), apesar do número 30 também parecer absurdo, o número 99 também parece ser um erro.
@@ -192,7 +192,7 @@ Outro tratamento realizado nos dados, foi em relação a data. Os valores plotad
 Em resumo, observamos um dataset bastante consistente em dados, e com porcentagens muito baixas de erro.
 
 
-# Estatística e Graficos
+### Estatística e Graficos
 Durante as análises estatísticas fizemos plots para ver a progressão do número de nascidos vivos para cada cidade, dos anos de 2010 à 2020. Verificamos, em algumas cidades, uma queda nos anos de 2016/2017. Essa queda pode ter se dado devido à pandemia do Zika vírus, durante a qual houve extensa propaganda para que as mães postergassem a gravidez, entretanto existem cidades em que esse comportamento não é observado. Ao mesmo tempo pode-se ver que tal comportamento não existe para 2020, pelo menos não para o balanço geral do ano.
 
 Como a pandemia se iniciou por volta de março, caso haja alguma diferença no número de nascidos vivos, esperaríamos que ela aparecesse em novembro/dezembro. Ainda assim é necessário levar em consideração o mês do ano, já que certa sazonalidade no número de nascidos vivos.
@@ -202,14 +202,23 @@ O arquivos ./assets/AnalysisPrism.pdf mostra os mesmos plots, mas também as tab
 Ao gerar os plots algumas observações foram geradas:
 
 •	Proporcionalmente, mulheres que tiveram entre 8 e 11 anos de escolaridade são maioria, seguidas das que tiveram 12 ou mais. 
+
 •	Observamos também que para todas as cidades avaliadas, exceto Barueri, a maioria dos bebês tem raça/cor registrada como Branca, seguido pelo pardo.
+
 •	A cidade de São Paulo está pelo menos 1 ordem de grandeza acima das demais cidades. Para algumas cidades já é possível ver certa tendência de crescimento ou decrescimento no número.
+
 •	A proporção de bebês registrados como brancos diminui, enquanto a de pardos e negros/pretos aumenta. O número de bebês registrados como brancos caiu 20 pontos percentuais no período.
+
 •	O número de mães solteiras é muito próximo do número de mae que são casas, tendências que vem desde 2012. De 2017 para 2020 o número de mães registradas como estando em união estável pareceu aumentar.
+
 •	O percentual de mães com mais de 12 anos de escolaridade vem aumentando aos poucos durante o período.
+
 •	A proporção de partos que são feitos por cesárea é consistentemente similar à proporção de partos "normais".
+
 •	O número de nascidos vivos em 2020 chega a ser 10% menor que o mesmo mês no ano anterior. Existe certa dúvida de se esse número seria o esperado para o período, dada a tendência dos anos, ou se esse número possa ser um resultado da pandemia de COVID-19. Esta dúvida é exatamente um dos questionamentos do projeto.
+
 •	A raça/cor amarela (asiática) é a que mais tem mães acima de 35 anos, enquanto a indígena é a que mais tem mães abaixo de 20 anos.
+
 
 
 
