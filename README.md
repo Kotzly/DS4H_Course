@@ -347,8 +347,8 @@ No resultado apenas para as mães auto-declaradas brancas, foi identificado que 
 
 As figuras abaixo mostram o gráfico de nascidos vivos para os últimos cinco anos, a fim de mostrar como são as características desses dados que fizeram que a análise feita chegasse na conclusão que se chegou. Por exemplo, temos a cidade de Santa Isabel, para a qual foi apontada mudança do número de nascidos vivos, e Dracena, para a qual foi apontado que não houve mudança.
 
-![Santa Isabel](./media/assets/images/santaisabelwhite.png)
-![Dracena](./media/assets/images/dracenawhite.png)
+![Santa Isabel](./assets/images/santaisabelwhite.png)
+![Dracena](./assets/images/dracenawhite.png)
 
 
 ### RACACOR != White
@@ -392,8 +392,8 @@ Para esta população, indicou-se mudança no número de nascidos vivos para as 
 
 A seguir se tem os plots do número de nascidos vivos de Barueri e de São Paulo, para a população de mulheres com 7 ou menos anos de estudos.
 
-![Barueri](./media/assets/images/barueriest7.png)
-![São Paulo](./media/assets/images/saopauloest7.png)
+![Barueri](./assets/images/barueriest7.png)
+![São Paulo](./assets/images/saopauloest7.png)
 
 ### ESCMAE >= 8 anos
 
@@ -436,8 +436,8 @@ Para o caso de mães casadas ou em união estável, apenas detectou-se mudança 
 
 A seguir se tem os plots do número de nascidos vivos de Santos e São José do Rio Preto, para a estratificação apresentada.
 
-![Santos](./media/assets/images/santoscasada.png)
-![São José do Rio Preto](./media/assets/images/saojosecasada.png)
+![Santos](./assets/images/santoscasada.png)
+![São José do Rio Preto](./assets/images/saojosecasada.png)
 
 
 ### ESTCIVMAE = Solteira
@@ -522,10 +522,10 @@ Para o AGEGROUP A3 as cidades de Andradina, Dracena, Guaíra, Jales, Santa Isabe
 
 Cidades como Guaíra, Dracena e Jales tiveram maus ajustes de parâmetros de treino para a maioria das estratificações, o que não nos permite tirar muitas conclusões sobre o comportamento do número de nascidos vivos destas cidades. O que se pode afirmar é o modelo escolhido provavelmente não é adequado para estas cidades, ou porque ele não captura a dinâmica do número de NV delas ou porque este número é demasiadamente ruidoso ou aleatório. Para verificarmos isso, podemos observar os gráficos dos números de nascidos vivos durante os anos de 2006 à 2020 para Santos e São Paulo (cidades com bons ajustes), e Dracena e Guaíra (cidade com ajustes majoritariamente ruins):
 
-![Sâo Paulo](./media/assets/images/saopaulo.png)
-![Santos](./media/assets/images/santos.png)
-![Dracena](./media/assets/images/dracena.png)
-![Guaíra](./media/assets/images/guaira.png)
+![Sâo Paulo](./assets/images/saopaulo.png)
+![Santos](./assets/images/santos.png)
+![Dracena](./assets/images/dracena.png)
+![Guaíra](./assets/images/guaira.png)
 
  
 Claramente se vê que São Paulo e Santos seguem um padrão e há uma sazonalidade relativamente comportada entre os meses. Por exemplo, quase todos os anos, em Santos, o número de nascidos vivos cai a partir no mês de junho até novembro, e sobe novamente em dezembro. Dito isso, pode-se ver também que é mais difícil detectar certo padrão nos números de Guaíra e Dracena, e isto muito provavelmente se dá pela ordem de grandeza do número de nascidos vivos destas duas cidades, tendo no máximo pouco mais de 80 nascidos vivos no mês. Esse pouco número de NV o torna altamente sujeito a aleatoriedades e eventos esporádicos, tornando o modelo incapaz de se ajustar bem aos dados devido à alta incerteza. Esta incerteza pode se tornar ainda maior ao se estratificar o *dataset*, já que o número de NV em uma amostra será ainda menor.
@@ -533,14 +533,14 @@ Claramente se vê que São Paulo e Santos seguem um padrão e há uma sazonalida
 
 Para visualizarmos graficamente o que a análise feita pode indicar, vamos usar as cidades de São Paulo e São Caetano do Sul como exemplo, e os anos de 2015 à 2020.
 
-![São Paulo a partir de 2015](./media/assets/images/spfull.png)
-![São Caetano do Sul a partir de 2015](./media/assets/images/saocaetanofull.png)
+![São Paulo a partir de 2015](./assets/images/spfull.png)
+![São Caetano do Sul a partir de 2015](./assets/images/saocaetanofull.png)
 
 Segundo à análise feita, o número de NV para São Paulo em 2020 foi o esperado pelo modelo. Pelo gráfico realmente os valores reais de 2020 parecem como esperado, há um decréscimo do número de todos os meses, como já bem acontecendo há alguns anos e o "formato" da curva do ano como um todo parece similar aos anos anteriores. Na mesma análise, São Caetano do Sul deu indícios de mudança de comportamento em 2020. Esse acontecimento é claramente visto no gráfico do número de NV da cidade: há um crescimento anormal no segundo semestre de 2020, principalmente no mês 10, que pode (ou não) ser consequência da pandemia. Isso é completamente discutível, já que o lockdown se deu na maioria das cidades brasileiras a partir de março, que fica exatamente 7 meses antes do mês 10.
 
 Outro exemplo é para a cidade de Santos, para AGEGROUP igual à A1 (mulheres com menos de 20 anos). Na análise concluimos que houve um diferença para esta cidade, no segundo semestre de 2020. O gráfico abaixo mostra o número por mês, a partir de 2015:
  
-![Santos a partir de 2015, AGEGROUP A1](./media/assets/images/santosa1.png)
+![Santos a partir de 2015, AGEGROUP A1](./assets/images/santosa1.png)
 
 Não se vê claramente uma diferença, apesar da análise a ter apontado. Isto poderia pedir por análise mais detalhadas, por mais visualizações ou pela pesquisa de diferentes modelos.
 
@@ -573,7 +573,7 @@ Devido a dificuldade que encontramos para escolher um teste que se adequasse cor
 
 Finalmente, a tabela a seguir mostra a conclusão de cada uma das análises. O símbolo de zero cortado indica que a análise foi inconclusiva, o sinal verde indica que houve mudança e o sinal vermelho indica que não houve mudança no número de nascidos vivos. Pode-se ver, por exemplo, que São Paulo não teve mudança em nenhuma das estratificações avaliadas, que Guaíra não teve resultado conclusivo em nenhuma das estratificações (provavelmente porque tem muitos poucos habitantes), e que há algumas cidades para as quais se detectou mudanças para algumas das estratificações e para outras não.
 
-![Resumo](./media/assets/images/resumo.jpg)
+![Resumo](./assets/images/resumo.jpg)
 
 
 # Conclusão
